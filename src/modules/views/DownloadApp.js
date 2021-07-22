@@ -32,7 +32,10 @@ const styles = (theme) => ({
   link: {
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3),
-    color: 'white'
+    color: 'white',
+    "&:hover": {
+      color: 'orange',
+  }
   },
   buoy: {
     width: 60,

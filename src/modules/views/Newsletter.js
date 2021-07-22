@@ -8,7 +8,10 @@ import Typography from '../components/Typography';
 import TextField from '../components/TextField';
 import Snackbar from '../components/Snackbar';
 import Button from '../components/Button';
-import image from '../../img/travel_news.jpg'
+import image from '../../img/travel_news.jpg';
+import InputField from '../components/InputField';
+import validator from 'validator';
+import Loading from '../components/Loading';
 
 const styles = (theme) => ({
   root: {
@@ -60,12 +63,8 @@ const styles = (theme) => ({
   },
 });
 
-function ProductCTA(props) {
-  const { classes, status, message, onValidated } = props;
+function Newsletter({classes, name, handleOnChangeName, handleOnChangeEmail, email, handleSendData, loading}) {
   const [open, setOpen] = useState(false);
-  const [email, setEmail] = useState('');
-  const [firstName, setFirstName] = useState('');
-
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -99,11 +98,39 @@ function ProductCTA(props) {
               <Typography variant="h5">
                 Become a member of Travel4Spanish community.
               </Typography>
-              <TextField noBorder value={firstName} name="firstName" onChange={setFirstName} className={classes.textField} placeholder="Your name" />
-              <TextField noBorder value={email} name="email" onChange={setEmail} className={classes.textField} placeholder="Your email" />
-              <Button type="submit" color="primary" variant="contained" className={classes.button}>
-                Keep me updated
-              </Button>
+              <InputField
+                onChangeHandler={handleOnChangeName}
+                type="text"
+                value={name}
+                placeholder="Your name"
+                isRequired
+                name="name"
+                className={classes.textField} 
+              />
+
+              <InputField
+                onChangeHandler={handleOnChangeEmail}
+                type="email"
+                value={email}
+                placeholder="Your email"
+                isRequired
+                name="email"
+                className={classes.textField} 
+              />
+              {loading ? 
+                <Loading message="Sending..."/> 
+                  : 
+                <Button 
+                  onClick={()=>handleSendData(email, name)} 
+                  type="submit" 
+                  color="primary" 
+                  variant="contained" 
+                  className={classes.button}
+                  disabled={!validator.isEmail(email)}
+                >
+                  Keep me updated
+                </Button>
+              }
             </form>
           </div>
         </Grid>
@@ -111,14 +138,14 @@ function ProductCTA(props) {
       <Snackbar
         open={open}
         onClose={handleClose}
-        message="We will send you material for study, once a week."
+        message={`Welcome to the Travel4Spanish Club, ${name}. We will send you a special material for study once a week.`}
       />
     </Container>
   );
 }
 
-ProductCTA.propTypes = {
+Newsletter.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ProductCTA);
+export default withStyles(styles)(Newsletter);

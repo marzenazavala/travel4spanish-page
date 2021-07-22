@@ -1,3 +1,16 @@
+@import '~antd/dist/antd.css';
+
+/* Spin */
+
+.ant-spin {
+  padding-top: 4%;
+  color: rgb(0, 0, 0);
+}
+.ant-spin-dot i {
+  background-color: rgb(41, 37, 29)
+}
+
+
 .App {
   text-align: center;
   margin: 0;
