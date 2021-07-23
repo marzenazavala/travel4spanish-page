@@ -10,7 +10,8 @@ import ProductHowItWorks from './modules/views/ProductHowItWorks';
 import Newsletter from './modules/views/Newsletter';
 import AppAppBar from './modules/views/AppAppBar';
 import DownloadApp from './modules/views/DownloadApp';
-import { apiUrl } from './helpers';
+import axios from 'axios';
+import {apiUrl, notify} from './helpers';
 
 
 
@@ -31,6 +32,25 @@ class Home extends Component {
   handleSendData = (email, firstName) => {
     console.log(firstName, email)
     this.handleLoadingState(true)
+    axios.post(`${apiUrl}/subscribe`, {
+      email,
+      firstName 
+    }).then(res => {
+      if(res.data.sucess){
+        notify('success', 'Welcome to the Travel4Spanish community. We will send you excellent material to study every week', res.data.message)
+        this.setState({
+          firstName: '',
+          email: '',
+        })
+        this.handleLoadingState(false)
+      } else {
+        notify('error', 'Unable to subscribe', res.data.error)
+        this.handleLoadingState(false)
+      }
+    }).catch(error => {
+      notify('error', 'Error. Please try again later.', error.message)
+      this.handleLoadingState(false)
+    })
   }
 
   handleOnChangeEmail = email => {
@@ -59,7 +79,6 @@ class Home extends Component {
             handleOnChangeEmail={this.handleOnChangeEmail}
             handleOnChangeName={this.handleOnChangeName}
             handleSendData={this.handleSendData}
-            //loading={this.handleLoadingState}
             loading={this.state.loading}
           />
         <ProductSmokingHero />
