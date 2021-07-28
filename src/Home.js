@@ -36,8 +36,8 @@ class Home extends Component {
       email,
       firstName 
     }).then(res => {
-      if(res.data.sucess){
-        notify('success', 'Welcome to the Travel4Spanish community. We will send you excellent material to study every week', res.data.message)
+      if(res.data.success){
+        notify('success', 'Welcome to the Travel4Spanish community. We will send you excellent material to study every week', res.data.success)
         this.setState({
           firstName: '',
           email: '',
@@ -66,7 +66,7 @@ class Home extends Component {
     const {email, firstName} = this.state;
     return (    
       <>
-        <AppAppBar />
+        {/* <AppAppBar /> */}
         <ProductHero />
         <DownloadApp />
         <ProductValues />
