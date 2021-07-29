@@ -4,10 +4,10 @@
 
 .ant-spin {
   padding-top: 4%;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 153, 0);
 }
 .ant-spin-dot i {
-  background-color: rgb(41, 37, 29)
+  background-color: rgb(255, 170, 0)
 }
 
 

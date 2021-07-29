@@ -1,7 +1,7 @@
 import React from 'react';
 //import './mcFormStyles.scss';
 import MailchimpSubscribe from "react-mailchimp-subscribe";
-import ProductCTA from '../views/ProductCTA';
+import CustomForm from './CustomForm';
 
 const MailchimpFormContainer = props => {
 
@@ -12,7 +12,7 @@ const MailchimpFormContainer = props => {
       <MailchimpSubscribe 
         url={postUrl}
         render={({ subscribe, status, message }) => (
-          <ProductCTA
+          <CustomForm
               status={status} 
               message={message}
               onValidated={formData => subscribe(formData)}

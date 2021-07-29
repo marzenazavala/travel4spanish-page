@@ -12,6 +12,8 @@ import AppAppBar from './modules/views/AppAppBar';
 import DownloadApp from './modules/views/DownloadApp';
 import axios from 'axios';
 import {apiUrl, notify} from './helpers';
+import CustomForm from './modules/form/CustomForm';
+import MailchimpFormContainer from './modules/form/MailChimpForm';
 
 
 
@@ -72,15 +74,15 @@ class Home extends Component {
         <ProductValues />
         <ProductCategories />
         <ProductHowItWorks />
-       
-          <Newsletter 
+        <MailchimpFormContainer />
+          {/* <Newsletter 
             email={email} 
             name={firstName} 
             handleOnChangeEmail={this.handleOnChangeEmail}
             handleOnChangeName={this.handleOnChangeName}
             handleSendData={this.handleSendData}
             loading={this.state.loading}
-          />
+          /> */}
         <ProductSmokingHero />
         <AppFooter />
       </>
