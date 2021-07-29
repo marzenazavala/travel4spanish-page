@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import ArrowDropDownCircleIcon from '@material-ui/icons/ArrowDropDownCircle';
+import {Link} from 'react-scroll'
 
 const styles = (theme) => ({
   root: {
@@ -47,6 +48,7 @@ const styles = (theme) => ({
   arrowDown: {
     position: 'absolute',
     bottom: theme.spacing(4),
+    color: 'orange'
   },
 });
 
@@ -59,7 +61,9 @@ function ProductHeroLayout(props) {
         {children}
         <div className={classes.backdrop} />
         <div className={clsx(classes.background, backgroundClassName)} />
-        <ArrowDropDownCircleIcon fontSize="large" className={classes.arrowDown}/>
+        <Link to="how" spy={true} smooth={true}>
+          <ArrowDropDownCircleIcon fontSize="large" className={classes.arrowDown}/>
+        </Link>
       </Container>
     </section>
   );

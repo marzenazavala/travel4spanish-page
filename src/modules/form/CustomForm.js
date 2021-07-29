@@ -1,15 +1,12 @@
-import MailchimpSubscribe from "react-mailchimp-subscribe";
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
-import TextField from '../components/TextField';
 import Snackbar from '../components/Snackbar';
 import Button from '../components/Button';
-import image from '../../img/travel_news.jpg';
+import image from '../../img/e.jpg';
 import InputField from '../components/InputField';
 import validator from 'validator';
 import Loading from '../components/Loading';
@@ -59,11 +56,11 @@ const styles = (theme) => ({
     image: {
       position: 'absolute',
       top: 38,
-      left: 38,
+      left: 0,
       right: 0,
       bottom: 0,
-      width: '120%',
-      maxWidth: 900,
+      width: '140%',
+      maxWidth: 1200,
     },
   });
 
@@ -75,11 +72,10 @@ const CustomForm = ({ classes, status, message, onValidated }) => {
     const [lastName, setLastName] = useState('');
 
     const [open, setOpen] = useState(false);
-    const [loading, setLoading] = useState(false);
+   
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setLoading(true)
     email &&
     firstName &&
     lastName &&
@@ -89,7 +85,6 @@ const CustomForm = ({ classes, status, message, onValidated }) => {
         MERGE1: firstName,
         MERGE2: lastName,
     });
-    setLoading(false);
     setOpen(true);
   };
 

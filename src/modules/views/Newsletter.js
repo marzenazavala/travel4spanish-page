@@ -5,7 +5,6 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
-import TextField from '../components/TextField';
 import Snackbar from '../components/Snackbar';
 import Button from '../components/Button';
 import image from '../../img/travel_news.jpg';
@@ -82,7 +81,6 @@ function Newsletter({classes, name, handleOnChangeName, handleOnChangeEmail, ema
           <Hidden smDown>
             <div className={classes.imageDots} />
             <img
-              //src="https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=750&q=80"
               src={image}
               alt="call to action"
               className={classes.image}

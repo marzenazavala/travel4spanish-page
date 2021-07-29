@@ -57,7 +57,7 @@ function AppAppBar(props) {
             <img src={Logo} alt="Logo travel4spanish" className={classes.logo}/>
           </Link>
           <div className={classes.right}>
-            <Link
+            {/* <Link
               color="inherit"
               variant="h6"
               underline="none"
@@ -73,7 +73,7 @@ function AppAppBar(props) {
               href="/premium-themes/onepirate/sign-up/"
             >
               {'Sign Up'}
-            </Link>
+            </Link> */}
           </div>
         </Toolbar>
       </AppBar>

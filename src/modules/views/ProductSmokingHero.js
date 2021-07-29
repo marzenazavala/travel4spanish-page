@@ -36,11 +36,13 @@ function ProductSmokingHero(props) {
 
   return (
     <Container className={classes.root} component="section">
-      <Button className={classes.button}>
-        <Typography variant="h4" component="span">
-          Got any questions? Need help?
-        </Typography>
-      </Button>
+      <a href= {'mailto: travel4spanish@gmail.com'}>
+        <Button className={classes.button}>
+          <Typography variant="h4" component="span">
+            Got any questions? Need help?
+          </Typography>
+        </Button>
+        </a>
       <Typography variant="subtitle1" className={classes.link}>
         We are here to help. Get in touch!
       </Typography>

@@ -4,7 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
-import backgroundImage from '../../img/hero_photo.jpg'
+import backgroundImage from '../../img/header2.jpg'
+
 
 
 
@@ -18,7 +19,12 @@ const styles = (theme) => ({
     minWidth: 200,
     backgroundColor: 'orange',
     marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(3),
+    marginBottom: theme.spacing(0),
+    '&:hover': {
+      backgroundColor: "#28282a",
+      color: 'orange'
+    },
+
   },
   h5: {
     marginBottom: theme.spacing(1),
@@ -40,21 +46,20 @@ function ProductHero(props) {
       {/* Increase the network loading priority of the background image. */}
       <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
       <Typography color="inherit" align="center" variant="h1" className={classes.more}>
-        Upgrade your Spanish skills
-      </Typography>
-      <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
-        Enjoy Travel4Spanish community and learn Spanish with native speakers
+        Trying to upgrade your Spanish?
       </Typography>
       <Button
-        color="primary"
-        variant="contained"
         size="large"
         className={classes.button}
         component="a"
-        href="/premium-themes/onepirate/sign-up/"
+        href="https://travel4spanish.setmore.com/"
       >
-        Book Lesson
+        Book Free Session
       </Button>
+      <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
+        Enjoy Travel4Spanish community and learn Spanish with native speakers
+      </Typography>
+     
       <Typography variant="h2" color="inherit" className={classes.more}>
         Discover our 8 Steps Method
       </Typography>
