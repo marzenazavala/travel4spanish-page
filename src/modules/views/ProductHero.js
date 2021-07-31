@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
-import backgroundImage from '../../img/header2.jpg'
+import backgroundImage from '../../img/header2.png'
 
 
 

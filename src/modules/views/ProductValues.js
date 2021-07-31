@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
-import {ReactComponent as Drink} from '../../icons/drink.svg'
+import {ReactComponent as Teacher} from '../../icons/hawaiian.svg'
 import {ReactComponent as Torch} from '../../icons/torch.svg'
 import {ReactComponent as Shirt} from '../../icons/shirt.svg'
 
@@ -77,7 +77,7 @@ function ProductValues(props) {
           </Grid>
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
-            <Drink fontSize="large" className={classes.image}/>
+            <Teacher fontSize="large" className={classes.image}/>
               <Typography variant="h6" className={classes.title}>
                 Native Speakers
               </Typography>

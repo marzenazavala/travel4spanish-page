@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
 import {ReactComponent as Sandals} from '../../icons/sandals.svg'
-import {ReactComponent as Teacher} from '../../icons/hawaiian.svg'
+import {ReactComponent as Drink} from '../../icons/drink.svg'
 import {ReactComponent as Maps} from '../../icons/maps.svg'
 
 
@@ -72,7 +72,7 @@ function ProductHowItWorks(props) {
                 Set goals
               </Typography>
               <Typography variant="h5">
-              Book free session with Travel4Spanish mentor and set your goals for net two weeks.
+              Book free session with Travel4Spanish mentor and set your goals for next two weeks.
               </Typography>
             </div>
           </Grid>
@@ -89,12 +89,12 @@ function ProductHowItWorks(props) {
           </Grid>
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
-            <Teacher fontSize="large" className={classes.image}/>
+            <Drink fontSize="large" className={classes.image}/>
               <Typography variant="h6" className={classes.title}>
-                Review progress
+                Progress Review
               </Typography>
               <Typography variant="h5">
-              After 15 days have your progress review with your mentor and set new goals.
+              After 14 days have your progress review with your mentor and set new goals.
               </Typography>
             </div>
           </Grid>
