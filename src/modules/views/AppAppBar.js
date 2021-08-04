@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
+//import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
-import Link from '@material-ui/core/Link';
+//import Link from '@material-ui/core/Link';
 import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
 import Logo from '../../img/T4SLogo3.png'
+import {Link} from 'react-scroll'
 
 const styles = (theme) => ({
   title: {
@@ -43,18 +44,12 @@ function AppAppBar(props) {
   const { classes } = props;
 
   return (
-    <div>
+    <div id="header">
       <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
           <div className={classes.left} />
-          <Link
-            variant="h6"
-            underline="none"
-            color="inherit"
-            className={classes.title}
-            href="/"
-          >
-            <img src={Logo} alt="Logo travel4spanish" className={classes.logo}/>
+          <Link to="header" spy={true} smooth={true}>
+             <img src={Logo} alt="Logo travel4spanish" className={classes.logo}/>
           </Link>
           <div className={classes.right}>
             {/* <Link

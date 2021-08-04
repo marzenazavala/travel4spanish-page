@@ -5,6 +5,7 @@ import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '../components/Typography';
 import Logo from '../../img/T4SLogo2.png'
+import {Link} from 'react-scroll'
 
 
 const styles = (theme) => ({
@@ -46,7 +47,9 @@ function ProductSmokingHero(props) {
       <Typography variant="subtitle1" className={classes.link}>
         We are here to help. Get in touch!
       </Typography>
-      <img src={Logo} alt='Logo travel4spanish' className={classes.logo} />
+      <Link to="header" spy={true} smooth={true}>
+        <img src={Logo} alt='Logo travel4spanish' className={classes.logo} />
+      </Link>
     </Container>
   );
 }

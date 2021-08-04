@@ -60,7 +60,7 @@ function ProductValues(props) {
                 Learn with mentor
               </Typography>
               <Typography variant="h5">
-                {"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                {"Your personal mentor will show you the fastest way to master Spanish. He will guide you according to your learning goals."}
               </Typography>
             </div>
           </Grid>
@@ -71,7 +71,7 @@ function ProductValues(props) {
                 Constant guidance
               </Typography>
               <Typography variant="h5">
-              {"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+              {"We provide constant support from our mentors at every stage of learning. We will show you the optimal educational techniques."}
               </Typography>
             </div>
           </Grid>
@@ -82,7 +82,7 @@ function ProductValues(props) {
                 Native Speakers
               </Typography>
               <Typography variant="h5">
-              {"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+              {"Our teachers are native speakers with enthusiasm and enthusiasm to guide you on your Spanish journey."}
               </Typography>
             </div>
           </Grid>
