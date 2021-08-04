@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import ArrowDropDownCircleIcon from '@material-ui/icons/ArrowDropDownCircle';
 import {Link} from 'react-scroll'
+import Hidden from '@material-ui/core/Hidden';
 
 const styles = (theme) => ({
   root: {
@@ -61,9 +62,11 @@ function ProductHeroLayout(props) {
         {children}
         <div className={classes.backdrop} />
         <div className={clsx(classes.background, backgroundClassName)} />
-        <Link to="how" spy={true} smooth={true}>
-          <ArrowDropDownCircleIcon fontSize="large" className={classes.arrowDown}/>
-        </Link>
+        <Hidden smDown>
+          <Link to="how" spy={true} smooth={true}>
+            <ArrowDropDownCircleIcon fontSize="large" className={classes.arrowDown}/>
+          </Link>
+        </Hidden>
       </Container>
     </section>
   );
