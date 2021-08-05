@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
+import {Fade} from 'react-reveal'
 import {ReactComponent as Teacher} from '../../icons/hawaiian.svg'
 import {ReactComponent as Torch} from '../../icons/torch.svg'
 import {ReactComponent as Shirt} from '../../icons/shirt.svg'
@@ -25,7 +26,7 @@ const styles = (theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     padding: theme.spacing(5, 5),
-    border: '2px dashed orange',
+    border: '4px dashed orange',
   },
   image: {
     height: 65,
@@ -54,6 +55,7 @@ function ProductValues(props) {
         />
         <Grid container spacing={5}>
           <Grid item xs={12} md={4}>
+          <Fade left>
             <div className={classes.item}>
               <Shirt fontSize="large" className={classes.image}/>
               <Typography variant="h6" className={classes.title}>
@@ -63,8 +65,10 @@ function ProductValues(props) {
                 {"Your personal mentor will show you the fastest way to master Spanish. He will guide you according to your learning goals."}
               </Typography>
             </div>
+            </Fade>
           </Grid>
           <Grid item xs={12} md={4}>
+          <Fade bottom>
             <div className={classes.item}>
             <Torch className={classes.image}/>
               <Typography variant="h6" className={classes.title}>
@@ -74,8 +78,10 @@ function ProductValues(props) {
               {"We provide constant support from our mentors at every stage of learning. We will show you the optimal educational techniques."}
               </Typography>
             </div>
+            </Fade>
           </Grid>
           <Grid item xs={12} md={4}>
+          <Fade right>
             <div className={classes.item}>
             <Teacher fontSize="large" className={classes.image}/>
               <Typography variant="h6" className={classes.title}>
@@ -85,6 +91,7 @@ function ProductValues(props) {
               {"Our teachers are native speakers with enthusiasm and enthusiasm to guide you on your Spanish journey."}
               </Typography>
             </div>
+            </Fade>
           </Grid>
         </Grid>
       </Container>

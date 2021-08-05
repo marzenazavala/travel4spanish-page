@@ -28,7 +28,7 @@ const styles = (theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     padding: theme.spacing(5, 5),
-    border: '2px dashed orange',
+    border: '4px dashed orange',
   },
   image: {
     height: 65,
