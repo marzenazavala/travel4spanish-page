@@ -10,6 +10,7 @@ import image from '../../img/news.png';
 import InputField from '../components/InputField';
 import validator from 'validator';
 import Loading from '../components/Loading';
+import {Fade} from 'react-reveal';
 
 
 const styles = (theme) => ({
@@ -97,6 +98,7 @@ const CustomForm = ({ classes, status, message, onValidated }) => {
           <Grid container>
           <Grid item xs={12} md={6} className={classes.imagesWrapper}>
               <Hidden smDown>
+              <Fade left>
                 <div className={classes.imageDots} />
                 <img
                   //src="https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=750&q=80"
@@ -104,9 +106,11 @@ const CustomForm = ({ classes, status, message, onValidated }) => {
                   alt="call to action"
                   className={classes.image}
                 />
+                </Fade>
               </Hidden>
             </Grid>
             <Grid item xs={12} md={6} className={classes.cardWrapper}>
+            <Fade right>
               <div className={classes.card}>
                 <form onSubmit={(e)=>handleSubmit(e)} className={classes.cardContent}>
                   <Typography variant="h2" component="h2" gutterBottom>
@@ -115,12 +119,6 @@ const CustomForm = ({ classes, status, message, onValidated }) => {
                   <Typography variant="h5">
                     Become a member of Travel4Spanish community.
                   </Typography>
-
-         
-
-
-
-
                   <div className="mc__field-container">
           <InputField
             //label="First Name"
@@ -181,6 +179,7 @@ const CustomForm = ({ classes, status, message, onValidated }) => {
                 )}
                 </form>
               </div>
+              </Fade>
             </Grid>
           </Grid>
           <Snackbar

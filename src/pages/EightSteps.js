@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Button from '../modules/components/Button';
+import {Fade, Flip} from 'react-reveal';
 import image1 from '../img/8_steps.png';
 import image2 from '../img/8_s_1.png';
 import image3 from '../img/8_s_2.png';
@@ -37,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 			color: 'black',
 			width: '100%',
 			padding: theme.spacing(0),
-    	border: '2px dashed black',
+    	border: '3px dashed black',
 			fontSize: '1rem',
 		},
 		mentor: {
@@ -45,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
 			color: 'black',
 			width: '100%',
 			padding: theme.spacing(0),
-    	border: '2px dashed black',
+    	border: '3px dashed black',
 			fontSize: '1rem',
 		},
 		feet: {
@@ -59,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
 			color: 'black',
 			width: '100%',
 			padding: theme.spacing(1,0),
-    	border: '2px dashed black',
+    	border: '3px dashed black',
 			fontSize: '1rem'
 		},
 		title:{
@@ -106,31 +107,39 @@ const EightSteps = () => {
 					<Grid item xs={12} sm={6}>
 						<Grid container spacing={4} className={classes.margin}>
 							<Grid item xs={12} sm={12}>
+							<Fade right>
 								<Paper elevation={0} className={classes.prize}>
 									<h2>Start your Spanish Mile</h2>
 									<h3>Goals session with language couch</h3>
 								</Paper>
+							</Fade>
 							</Grid>
 							<Grid item xs={12} sm={12}>
+							<Fade right>
 								<Paper elevation={0} className={classes.mentor}>
 									<h3>Day 1</h3>
 									<p>Lesson online with your mentor</p>
 								</Paper>
+							</Fade>
 							</Grid>
 							<Grid item xs={12} sm={12}>
+							<Fade right>
 								<Paper elevation={0} className={classes.steps}>
 									<h3>Day 2</h3>
 									<p>Practice material from Step 2</p>
 								</Paper>
+							</Fade>
 							</Grid>
 							{/* <Grid item xs={12} sm={12}>
 								<img alt="travel4spanish" className={classes.feet} src={steps1}/>
 							</Grid> */}
 							<Grid item xs={12} sm={12}>
+							<Fade right>
 								<Paper elevation={0} className={classes.steps}>
 									<h3>Day 3</h3>
 									<p>Practice tasks from Step 2</p>
 								</Paper>
+							</Fade>
 							</Grid>
 						</Grid>
           </Grid>
@@ -140,31 +149,39 @@ const EightSteps = () => {
           <Grid item xs={12} sm={6}>
 					<Grid container spacing={4} className={classes.margin}>
 							<Grid item xs={12} sm={12}>
+							<Fade left>
 								<Paper elevation={0} className={classes.steps}>
 									<h3>Day 4</h3>
 									<p>Book lesson & practice tasks from Step 3</p>
 								</Paper>
+							</Fade>
 							</Grid>
 							<Grid item xs={12} sm={12}>
+							<Fade left>
 								<Paper elevation={0} className={classes.mentor}>
 									<h3>Day 5</h3>
 									<p>Practice material with your mentor</p>
 								</Paper>
+							</Fade>
 							</Grid>
 							{/* <Grid item xs={12} sm={12}>
 								<img alt="travel4spanish" className={classes.feet} src={steps2}/>
 							</Grid> */}
 							<Grid item xs={12} sm={12}>
+							<Fade left>
 								<Paper elevation={0} className={classes.steps}>
 									<h3>Day 6</h3>
 									<p>Practice tasks from Step 4</p>
 								</Paper>
+								</Fade>
 							</Grid>
 							<Grid item xs={12} sm={12}>
+							<Fade left>
 								<Paper elevation={0} className={classes.mentor}>
 									<h3>Day 7</h3>
 									<p>Practice material from Step 4 with your mentor</p>
 								</Paper>
+								</Fade>
 							</Grid>
 						</Grid>
           </Grid>
@@ -180,31 +197,39 @@ const EightSteps = () => {
           <Grid item xs={12} sm={6}>
 					<Grid container spacing={4} className={classes.margin}>
 							<Grid item xs={12} sm={12}>
+							<Fade right>
 								<Paper elevation={0} className={classes.steps}>
 									<h3>Day 8</h3>
 									<p>Practice material from Step 5</p>
 								</Paper>
+								</Fade>
 							</Grid>
 							{/* <Grid item xs={12} sm={12}>
 								<img alt="travel4spanish" className={classes.feet} src={steps1}/>
 							</Grid> */}
 							<Grid item xs={12} sm={12}>
+							<Fade right>
 								<Paper elevation={0} className={classes.steps}>
 									<h3>Day 9</h3>
 									<p>Practice tasks from Step 6</p>
 								</Paper>
+								</Fade>
 							</Grid>
 							<Grid item xs={12} sm={12}>
+							<Fade right>
 								<Paper elevation={0} className={classes.mentor}>
 									<h3>Day 10</h3>
 									<p>Practice tasks from Step 5 and 6 with mentor</p>
 								</Paper>
+								</Fade>
 							</Grid>
 							<Grid item xs={12} sm={12}>
+							<Fade right>
 								<Paper elevation={0} className={classes.steps}>
 									<h3>Day 11</h3>
 									<p>Practice tasks from Step 7</p>
 								</Paper>
+							</Fade>
 							</Grid>
 						</Grid>
           </Grid>
@@ -214,31 +239,39 @@ const EightSteps = () => {
           <Grid item xs={12} sm={6}>
 					<Grid container spacing={4} className={classes.margin}>
 							<Grid item xs={12} sm={12}>
+							<Fade left>
 								<Paper elevation={0} className={classes.mentor}>
 									<h3>Day 12</h3>
 									<p>Practice material from Step 7 with mentor</p>
 								</Paper>
+							</Fade>
 							</Grid>
 							<Grid item xs={12} sm={12}>
+							<Fade left>
 								<Paper elevation={0} className={classes.steps}>
 									<h3>Day 13</h3>
 									<p>Practice material from Step 8</p>
 								</Paper>
+							</Fade>
 							</Grid>
 							<Grid item xs={12} sm={12}>
+							<Fade left>
 								<Paper elevation={0} className={classes.mentor}>
 									<h3>Day 14</h3>
 									<p>Practice tasks from Step 8 with mentor</p>
 								</Paper>
+							</Fade>
 							</Grid>
 							{/* <Grid item xs={12} sm={12}>
 								<img alt="travel4spanish" className={classes.feet} src={steps2}/>
 							</Grid> */}
 							<Grid item xs={12} sm={12}>
+							<Fade left>
             		<Paper elevation={0} className={classes.prize}>
 									<h2>Congratulations!!! You finished your Mile</h2>
 									<h3>Take your Prize and set next goals/retro session</h3>
 								</Paper>
+							</Fade>
           		</Grid>  
 						</Grid>
           </Grid>
@@ -249,6 +282,7 @@ const EightSteps = () => {
 						<img className={classes.prize} src={image4}/>
           </Grid>  */}
 					<Grid item xs={12} sm={12}>
+					<Flip bottom>
 						<Button
 							size="large"
 							className={classes.button}
@@ -257,6 +291,7 @@ const EightSteps = () => {
 						>
 							Book Goals Session Here
 						</Button>
+					</Flip>
 					</Grid>
 					<Grid item xs={12} sm={12}>
 						<img alt="travel4spanish" className={classes.feetMid} src={steps1}/>
