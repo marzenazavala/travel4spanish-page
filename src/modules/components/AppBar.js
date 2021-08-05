@@ -7,7 +7,8 @@ import MuiAppBar from '@material-ui/core/AppBar';
 const styles = (theme) => ({
   root: {
     color: theme.palette.common.white,
-    backgroundColor: theme.palette.warning.main,
+    //backgroundColor: theme.palette.warning.main,
+    backgroundColor: '#88d8f7'
   },
 });
 

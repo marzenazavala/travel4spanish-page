@@ -26,16 +26,13 @@ const styles = (theme) => ({
     margin: theme.spacing(2, 3),
     padding: theme.spacing(0, 5),
     "&:hover": {
-        border: '2px solid orange',
+        border: '2px solid #88d8f7',
     }
   },
   link: {
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3),
     color: 'white',
-    "&:hover": {
-      color: 'orange',
-  }
   },
   buoy: {
     width: 60,

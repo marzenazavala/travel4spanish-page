@@ -58,6 +58,30 @@ function AppAppBar(props) {
               variant="h6"
               underline="none"
               className={classes.rightLink}
+              to="/mission"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "white"
+              }}
+            >
+              {'Our Mission'}
+            </NavLink>
+            <NavLink
+              variant="h6"
+              underline="none"
+              className={classes.rightLink}
+              to="/team"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "white"
+              }}
+            >
+              {'Team'}
+            </NavLink>
+          <NavLink
+              variant="h6"
+              underline="none"
+              className={classes.rightLink}
               to="/8-steps"
               activeStyle={{
                 fontWeight: "bold",
@@ -65,6 +89,30 @@ function AppAppBar(props) {
               }}
             >
               {'8 Steps Method'}
+            </NavLink>
+            <NavLink
+              variant="h6"
+              underline="none"
+              className={classes.rightLink}
+              to="/blog"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "white"
+              }}
+            >
+              {'Blog'}
+            </NavLink>
+            <NavLink
+              variant="h6"
+              underline="none"
+              className={classes.rightLink}
+              to="/contact"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "white"
+              }}
+            >
+              {'Contact'}
             </NavLink>
             {/* <Link
               color="inherit"

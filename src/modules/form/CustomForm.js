@@ -6,7 +6,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
 import Snackbar from '../components/Snackbar';
 import Button from '../components/Button';
-import image from '../../img/e.png';
+import image from '../../img/news.png';
 import InputField from '../components/InputField';
 import validator from 'validator';
 import Loading from '../components/Loading';
