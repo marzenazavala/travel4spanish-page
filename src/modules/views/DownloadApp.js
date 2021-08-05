@@ -56,7 +56,7 @@ function DownloadApp(props) {
   const { classes } = props;
 
   return (
-    <Container className={classes.root} component="section">
+    <Container className={classes.root} component="section" maxWidth="false">
         <Grid container className={classes.grid}>
         <Grid item xs={12} md={6}>
             <img src={image} alt="phone" className={classes.phone}/>
