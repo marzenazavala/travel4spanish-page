@@ -3,6 +3,7 @@ import { Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Button from '../modules/components/Button';
 import image1 from '../img/8_steps.png';
 import image2 from '../img/8_s_1.png';
 import image3 from '../img/8_s_2.png';
@@ -38,10 +39,6 @@ const useStyles = makeStyles((theme) => ({
 			padding: theme.spacing(0),
     	border: '2px dashed black',
 			fontSize: '1rem',
-			// '&:hover': {
-			// 	backgroundColor: 'orange',
-			// 	border: '2px dashed black',
-			// }
 		},
 		mentor: {
 			backgroundColor: 'orange',
@@ -50,10 +47,6 @@ const useStyles = makeStyles((theme) => ({
 			padding: theme.spacing(0),
     	border: '2px dashed black',
 			fontSize: '1rem',
-			// '&:hover': {
-			// 	backgroundColor: 'white',
-			// 	border: '2px dashed orange',
-			// }
 		},
 		feet: {
 			width: '12%',
@@ -67,16 +60,23 @@ const useStyles = makeStyles((theme) => ({
 			width: '100%',
 			padding: theme.spacing(1,0),
     	border: '2px dashed black',
-			fontSize: '1rem',
-			// '&:hover': {
-			// 	backgroundColor: 'white',
-			// 	border: '2px dashed black',
-			// }
+			fontSize: '1rem'
 		},
 		title:{
 			fontSize: '2rem',
 			weight: 'bold'
-		}
+		},
+		button: {
+			minWidth: 200,
+			backgroundColor: '#ac85c7',
+			marginTop: theme.spacing(5),
+			marginBottom: theme.spacing(0),
+			'&:hover': {
+				backgroundColor: "#28282a",
+				color: '#ac85c7'
+			},
+	
+		},
   }));
 
 const EightSteps = () => {
@@ -248,6 +248,16 @@ const EightSteps = () => {
 					{/* <Grid item xs={12} sm={6}>
 						<img className={classes.prize} src={image4}/>
           </Grid>  */}
+					<Grid item xs={12} sm={12}>
+						<Button
+							size="large"
+							className={classes.button}
+							component="a"
+							href="https://travel4spanish.setmore.com/"
+						>
+							Book Goals Session Here
+						</Button>
+					</Grid>
 					<Grid item xs={12} sm={12}>
 						<img alt="travel4spanish" className={classes.feetMid} src={steps1}/>
 					</Grid>
