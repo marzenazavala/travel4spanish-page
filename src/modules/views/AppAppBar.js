@@ -7,6 +7,8 @@ import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
 import Logo from '../../img/T4SLogo3.png'
 import {Link} from 'react-scroll'
+import {NavLink} from 'react-router-dom';
+
 
 const styles = (theme) => ({
   title: {
@@ -29,7 +31,7 @@ const styles = (theme) => ({
   },
   rightLink: {
     fontSize: 16,
-    color: theme.palette.common.white,
+    color: 'black',
     marginLeft: theme.spacing(3),
   },
   linkSecondary: {
@@ -52,6 +54,18 @@ function AppAppBar(props) {
              <img src={Logo} alt="Logo travel4spanish" className={classes.logo}/>
           </Link>
           <div className={classes.right}>
+          <NavLink
+              variant="h6"
+              underline="none"
+              className={classes.rightLink}
+              to="/8-steps"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "white"
+              }}
+            >
+              {'8 Steps Method'}
+            </NavLink>
             {/* <Link
               color="inherit"
               variant="h6"

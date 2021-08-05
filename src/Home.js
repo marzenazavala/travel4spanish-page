@@ -11,12 +11,11 @@ import AppAppBar from './modules/views/AppAppBar';
 import DownloadApp from './modules/views/DownloadApp';
 import MailchimpFormContainer from './modules/form/MailChimpForm';
 
-
 const Home = () => {
   
     return (    
       <>
-        <AppAppBar />
+        {/* <AppAppBar /> */}
         <ProductHero />
         <DownloadApp />
         <ProductValues />
