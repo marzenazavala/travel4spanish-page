@@ -47,8 +47,7 @@ const styles = (theme) => ({
     zIndex: -2,
   },
   arrowDown: {
-    position: 'absolute',
-    bottom: theme.spacing(4),
+    marginTop: theme.spacing(8),
     color: 'orange'
   },
 });

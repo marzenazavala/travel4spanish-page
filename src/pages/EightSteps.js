@@ -126,7 +126,7 @@ const EightSteps = () => {
 							<Fade right>
 								<Paper elevation={0} className={classes.steps}>
 									<h3>Day 2</h3>
-									<p>Practice material from Step 2</p>
+									<p>Practice material from Step 1</p>
 								</Paper>
 							</Fade>
 							</Grid>

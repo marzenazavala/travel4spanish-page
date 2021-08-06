@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 //import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
-//import Link from '@material-ui/core/Link';
 import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
 import Logo from '../../img/T4SLogo3.png'
-import {Link} from 'react-scroll'
+import {Link as ScrollLink} from 'react-scroll'
 import {NavLink} from 'react-router-dom';
+import Link from '@material-ui/core/Link';
 
 
 const styles = (theme) => ({
@@ -50,11 +50,11 @@ function AppAppBar(props) {
       <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
           <div className={classes.left} />
-          <Link to="header" spy={true} smooth={true}>
+          <Link href="/">
              <img src={Logo} alt="Logo travel4spanish" className={classes.logo}/>
           </Link>
           <div className={classes.right}>
-          <NavLink
+          {/* <NavLink
               variant="h6"
               underline="none"
               className={classes.rightLink}
@@ -65,8 +65,8 @@ function AppAppBar(props) {
               }}
             >
               {'Our Mission'}
-            </NavLink>
-            <NavLink
+            </NavLink> */}
+            {/* <NavLink
               variant="h6"
               underline="none"
               className={classes.rightLink}
@@ -77,7 +77,7 @@ function AppAppBar(props) {
               }}
             >
               {'Team'}
-            </NavLink>
+            </NavLink> */}
           <NavLink
               variant="h6"
               underline="none"
@@ -90,7 +90,7 @@ function AppAppBar(props) {
             >
               {'8 Steps Method'}
             </NavLink>
-            <NavLink
+            {/* <NavLink
               variant="h6"
               underline="none"
               className={classes.rightLink}
@@ -113,7 +113,7 @@ function AppAppBar(props) {
               }}
             >
               {'Contact'}
-            </NavLink>
+            </NavLink> */}
             {/* <Link
               color="inherit"
               variant="h6"

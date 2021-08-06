@@ -72,7 +72,7 @@ function ProductHowItWorks(props) {
                 Set goals
               </Typography>
               <Typography variant="h5">
-              Book free session with Travel4Spanish mentor and set your goals for next two weeks.
+              Book free session with Travel4Spanish coach and set your goals for next two weeks.
               </Typography>
             </div>
           </Grid>
@@ -83,7 +83,7 @@ function ProductHowItWorks(props) {
                 8 Steps Method
               </Typography>
               <Typography variant="h5">
-              Start your journey - learn and practice your new skills with native speaker.
+              Start your journey - learn and practice new skills with native speaker.
               </Typography>
             </div>
           </Grid>
@@ -94,7 +94,7 @@ function ProductHowItWorks(props) {
                 Progress Review
               </Typography>
               <Typography variant="h5">
-              After 14 days have your progress review with your mentor and set new goals.
+              After 14 days have your progress review with language coach and set new goals.
               </Typography>
             </div>
           </Grid>

@@ -9,6 +9,7 @@ import backgroundImage from '../../img/header2.png'
 
 
 
+
 const styles = (theme) => ({
   background: {
     backgroundImage: `url(${backgroundImage})`,
@@ -59,7 +60,6 @@ function ProductHero(props) {
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
         Enjoy Travel4Spanish community and learn Spanish with native speakers
       </Typography>
-     
       <Typography variant="h2" color="inherit" className={classes.more}>
         Discover our 8 Steps Method
       </Typography>

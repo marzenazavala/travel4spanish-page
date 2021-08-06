@@ -97,36 +97,42 @@ function ProductCategories(props) {
         'https://images.unsplash.com/photo-1608055997373-383bebd42f41?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
       title: 'Travel4Spanish App',
       width: '40%',
+      href: 'https://play.google.com/store/apps/details?id=com.app.mubgjgyzvwwjerdytqkonoldxexarcfqznlhsamvkspbficiup&gl=PL'
     },
     {
       url:
         'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1048&q=80',
       title: 'Goals',
       width: '20%',
+      href: '/8-steps'
     },
     {
       url:
         'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=400&q=80',
       title: '8 Steps Method',
       width: '40%',
+      href: '/8-steps'
     },
     {
       url:
         'https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=879&q=80',
       title: 'Progress',
       width: '38%',
+      href: '/8-steps'
     },
     {
       url:
         'https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80',
       title: 'Community',
       width: '38%',
+      href: '/8-steps'
     },
     {
       url:
         'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80',
       title: 'Native Speakers',
       width: '24%',
+      href: '/8-steps'
     }
   ];
 
@@ -144,6 +150,7 @@ function ProductCategories(props) {
             style={{
               width: image.width,
             }}
+            href={image.href}
           >
             <div
               className={classes.imageSrc}
