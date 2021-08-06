@@ -75,9 +75,9 @@ function DownloadApp(props) {
             </Typography>
             <a href="https://play.google.com/store/apps/details?id=com.app.mubgjgyzvwwjerdytqkonoldxexarcfqznlhsamvkspbficiup&gl=PL">
             <Button className={classes.button}>
-                <Typography variant="h4" component="span" >
+              <Typography variant="h4" component="span" >
                 Download
-                </Typography>
+              </Typography>
             </Button>
             </a>
             <img src={google} alt="google play" className={classes.google}/>

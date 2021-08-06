@@ -5,16 +5,17 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Button from '../modules/components/Button';
 import {Fade, Flip} from 'react-reveal';
+import {Link} from 'react-scroll'
 import image1 from '../img/8_steps.png';
 import image2 from '../img/8_s_1.png';
 import image3 from '../img/8_s_2.png';
-import image4 from '../img/8_s_3.png';
 import image5 from '../img/8_s_4.png';
 import steps1 from '../img/feet1.png';
 import steps2 from '../img/feet2.png';
 import orange from '../img/orange.png';
 import white from '../img/white.png';
 import blue from '../img/blue.png';
+import Typography from '../modules/components/Typography';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -72,18 +73,19 @@ const useStyles = makeStyles((theme) => ({
 			backgroundColor: '#ac85c7',
 			marginTop: theme.spacing(5),
 			marginBottom: theme.spacing(0),
+			padding: theme.spacing(2),
+			border: '4px solid orange',
 			'&:hover': {
-				backgroundColor: "#28282a",
-				color: '#ac85c7'
+				backgroundColor: "orange",
+				border: '4px solid #ac85c7',
 			},
-	
 		},
   }));
 
 const EightSteps = () => {
   const classes = useStyles();
   return(
-    <div className={classes.root}>
+    <div id="top" className={classes.root}>
       <Container maxWidth="false">
         <p className={classes.title}>8 Steps Method</p>
 				<Grid container spacing={6}>
@@ -130,9 +132,6 @@ const EightSteps = () => {
 								</Paper>
 							</Fade>
 							</Grid>
-							{/* <Grid item xs={12} sm={12}>
-								<img alt="travel4spanish" className={classes.feet} src={steps1}/>
-							</Grid> */}
 							<Grid item xs={12} sm={12}>
 							<Fade right>
 								<Paper elevation={0} className={classes.steps}>
@@ -164,9 +163,6 @@ const EightSteps = () => {
 								</Paper>
 							</Fade>
 							</Grid>
-							{/* <Grid item xs={12} sm={12}>
-								<img alt="travel4spanish" className={classes.feet} src={steps2}/>
-							</Grid> */}
 							<Grid item xs={12} sm={12}>
 							<Fade left>
 								<Paper elevation={0} className={classes.steps}>
@@ -204,9 +200,6 @@ const EightSteps = () => {
 								</Paper>
 								</Fade>
 							</Grid>
-							{/* <Grid item xs={12} sm={12}>
-								<img alt="travel4spanish" className={classes.feet} src={steps1}/>
-							</Grid> */}
 							<Grid item xs={12} sm={12}>
 							<Fade right>
 								<Paper elevation={0} className={classes.steps}>
@@ -262,9 +255,6 @@ const EightSteps = () => {
 								</Paper>
 							</Fade>
 							</Grid>
-							{/* <Grid item xs={12} sm={12}>
-								<img alt="travel4spanish" className={classes.feet} src={steps2}/>
-							</Grid> */}
 							<Grid item xs={12} sm={12}>
 							<Fade left>
             		<Paper elevation={0} className={classes.prize}>
@@ -278,9 +268,6 @@ const EightSteps = () => {
 					<Grid item xs={12} sm={6}>
 						<img alt="travel4spanish" className={classes.image} src={image1}/>
           </Grid>
-					{/* <Grid item xs={12} sm={6}>
-						<img className={classes.prize} src={image4}/>
-          </Grid>  */}
 					<Grid item xs={12} sm={12}>
 					<Flip bottom>
 						<Button
@@ -289,12 +276,16 @@ const EightSteps = () => {
 							component="a"
 							href="https://travel4spanish.setmore.com/"
 						>
+							<Typography variant="h4" component="span" >
 							Book Goals Session Here
+							</Typography>
 						</Button>
 					</Flip>
 					</Grid>
 					<Grid item xs={12} sm={12}>
-						<img alt="travel4spanish" className={classes.feetMid} src={steps1}/>
+						<Link to="top" spy={true} smooth={true} >
+							<img alt="travel4spanish" className={classes.feetMid} src={steps1}/>
+						</Link>
 					</Grid>
         </Grid>
 				

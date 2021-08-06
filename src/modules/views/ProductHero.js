@@ -21,9 +21,11 @@ const styles = (theme) => ({
     backgroundColor: 'orange',
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(0),
+    border: '4px solid white',
     '&:hover': {
-      backgroundColor: "#28282a",
-      color: 'orange'
+      backgroundColor: "white",
+      color: 'black',
+      border: '4px solid #88d8f7',
     },
 
   },
@@ -35,7 +37,8 @@ const styles = (theme) => ({
     },
   },
   more: {
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(3),
+    
   },
 });
 

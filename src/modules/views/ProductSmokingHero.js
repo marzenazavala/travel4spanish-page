@@ -18,9 +18,12 @@ const styles = (theme) => ({
   },
   button: {
     border: '4px solid currentColor',
-    borderRadius: 0,
+    borderRadius: 5,
     height: 'auto',
     padding: theme.spacing(2, 5),
+    "&:hover": {
+      background: "#88d8f7"
+    }
   },
   link: {
     marginTop: theme.spacing(3),
