@@ -68,18 +68,32 @@ const useStyles = makeStyles((theme) => ({
 			fontSize: '2rem',
 			weight: 'bold'
 		},
+		// button: {
+		// 	minWidth: 200,
+		// 	backgroundColor: '#ac85c7',
+		// 	marginTop: theme.spacing(5),
+		// 	marginBottom: theme.spacing(0),
+		// 	padding: theme.spacing(2),
+		// 	border: '4px solid orange',
+		// 	'&:hover': {
+		// 		backgroundColor: "orange",
+		// 		border: '4px solid #ac85c7',
+		// 	},
+		// },
 		button: {
-			minWidth: 200,
-			backgroundColor: '#ac85c7',
-			marginTop: theme.spacing(5),
-			marginBottom: theme.spacing(0),
-			padding: theme.spacing(2),
 			border: '4px solid orange',
-			'&:hover': {
-				backgroundColor: "orange",
-				border: '4px solid #ac85c7',
-			},
-		},
+			borderRadius: 5,
+			height: '20%',
+			margin: theme.spacing(2, 3),
+			padding: theme.spacing(2),
+			backgroundColor: '#88d8f7',
+			color: 'white',
+			"&:hover": {
+				border: '4px solid #88d8f7',
+				backgroundColor: 'orange',
+				color: 'white'
+			}
+		  },
   }));
 
 const EightSteps = () => {
