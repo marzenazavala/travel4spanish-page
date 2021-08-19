@@ -90,7 +90,7 @@ function AppAppBar(props) {
             >
               {'8 Steps Method'}
             </NavLink>
-            <NavLink
+            {/* <NavLink
               variant="h6"
               underline="none"
               className={classes.rightLink}
@@ -101,7 +101,7 @@ function AppAppBar(props) {
               }}
             >
               {'Prices'}
-            </NavLink>
+            </NavLink> */}
             {/*<NavLink
               variant="h6"
               underline="none"

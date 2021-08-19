@@ -79,6 +79,9 @@ const useStyles = makeStyles((theme) => ({
 				color: 'black'
 			}
 		  },
+		  legend: {
+			  marginTop: theme.spacing(4)
+		  }
   }));
 
 const EightSteps = () => {
@@ -87,7 +90,7 @@ const EightSteps = () => {
     <div id="top" className={classes.root}>
       <Container maxWidth="false">
 		  <HeadTitle classes={classes} title="Learn with 8 Steps Method"/>
-				<Grid container>
+				<Grid container className={classes.legend}>
 					<Grid item xs={12} sm={4}>
 						<img src={blue} alt="blue color"/>
 						<h3>2 sessions with coach</h3>

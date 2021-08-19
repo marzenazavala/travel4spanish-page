@@ -19,7 +19,7 @@ const Home = () => {
       <>
         {/* <AppAppBar /> */}
         <ProductHero />
-        <DownloadApp />
+        {/* <DownloadApp /> */}
         <ProductValues />
         <ProductCategories />
         <ProductHowItWorks />
