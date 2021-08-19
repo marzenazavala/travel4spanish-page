@@ -9,6 +9,7 @@ import {ReactComponent as Drink} from '../../icons/drink.svg'
 import {ReactComponent as Maps} from '../../icons/maps.svg'
 
 
+
 const styles = (theme) => ({
   root: {
     display: 'flex',
@@ -55,11 +56,7 @@ function ProductHowItWorks(props) {
   return (
     <section className={classes.root} id="how">
       <Container className={classes.container}>
-        <img
-          src="/static/themes/onepirate/productCurvyLines.png"
-          className={classes.curvyLines}
-          alt="curvy lines"
-        />
+      
         <Typography variant="h4" className={classes.section} component="h2">
            How it works
         </Typography>

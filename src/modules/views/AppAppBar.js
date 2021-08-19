@@ -90,19 +90,19 @@ function AppAppBar(props) {
             >
               {'8 Steps Method'}
             </NavLink>
-            {/* <NavLink
+            <NavLink
               variant="h6"
               underline="none"
               className={classes.rightLink}
-              to="/blog"
+              to="/prices"
               activeStyle={{
                 fontWeight: "bold",
                 color: "white"
               }}
             >
-              {'Blog'}
+              {'Prices'}
             </NavLink>
-            <NavLink
+            {/*<NavLink
               variant="h6"
               underline="none"
               className={classes.rightLink}

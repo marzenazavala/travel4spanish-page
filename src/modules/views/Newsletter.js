@@ -14,8 +14,8 @@ import Loading from '../components/Loading';
 
 const styles = (theme) => ({
   root: {
-    marginTop: 0,
-    marginBottom: theme.spacing(15),
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1),
     display: 'flex',
   },
   cardWrapper: {

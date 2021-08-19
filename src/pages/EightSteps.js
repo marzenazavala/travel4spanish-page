@@ -16,6 +16,7 @@ import orange from '../img/orange.png';
 import white from '../img/white.png';
 import blue from '../img/blue.png';
 import Typography from '../modules/components/Typography';
+import HeadTitle from '../components/HeadTitle';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -64,10 +65,6 @@ const useStyles = makeStyles((theme) => ({
     	border: '3px dashed black',
 			fontSize: '1rem'
 		},
-		title:{
-			fontSize: '2rem',
-			weight: 'bold'
-		},
 		button: {
 			border: '4px solid orange',
 			borderRadius: 5,
@@ -89,20 +86,20 @@ const EightSteps = () => {
   return(
     <div id="top" className={classes.root}>
       <Container maxWidth="false">
-        <p className={classes.title}>8 Steps Method</p>
-				<Grid container spacing={6}>
-						<Grid item xs={12} sm={4}>
-							<img src={blue} alt="blue color"/>
-							<h3>2 sessions with coach</h3>
-						</Grid>
-						<Grid item xs={12} sm={4}>
-							<img src={orange} alt="orange color"/>
-							<h3>6 sessions with mentor</h3>
-						</Grid>
-						<Grid item xs={12} sm={4}>
-							<img src={white} alt="white color"/>
-							<h3>8 steps with study material</h3>
-						</Grid>
+		  <HeadTitle classes={classes} title="Learn with 8 Steps Method"/>
+				<Grid container>
+					<Grid item xs={12} sm={4}>
+						<img src={blue} alt="blue color"/>
+						<h3>2 sessions with coach</h3>
+					</Grid>
+					<Grid item xs={12} sm={4}>
+						<img src={orange} alt="orange color"/>
+						<h3>6 sessions with mentor</h3>
+					</Grid>
+					<Grid item xs={12} sm={4}>
+						<img src={white} alt="white color"/>
+						<h3>8 steps with study material</h3>
+					</Grid>
 				</Grid>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>

@@ -10,6 +10,8 @@ import ProductHowItWorks from './modules/views/ProductHowItWorks';
 import AppAppBar from './modules/views/AppAppBar';
 import DownloadApp from './modules/views/DownloadApp';
 import MailchimpFormContainer from './modules/form/MailChimpForm';
+import Prices from './modules/views/Prices';
+
 
 const Home = () => {
   
@@ -21,6 +23,7 @@ const Home = () => {
         <ProductValues />
         <ProductCategories />
         <ProductHowItWorks />
+        <Prices />
         <MailchimpFormContainer />
         <ProductSmokingHero />
         <AppFooter />

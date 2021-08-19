@@ -13,7 +13,7 @@ const styles = (theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    marginTop: theme.spacing(9),
+    marginTop: theme.spacing(0),
     marginBottom: theme.spacing(2),
   },
   button: {
