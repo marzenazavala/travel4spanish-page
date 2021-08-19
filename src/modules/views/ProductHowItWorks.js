@@ -7,6 +7,7 @@ import Typography from '../components/Typography';
 import {ReactComponent as Sandals} from '../../icons/sandals.svg'
 import {ReactComponent as Drink} from '../../icons/drink.svg'
 import {ReactComponent as Maps} from '../../icons/maps.svg'
+import {Fade} from 'react-reveal';
 
 
 
@@ -55,8 +56,8 @@ function ProductHowItWorks(props) {
 
   return (
     <section className={classes.root} id="how">
+      <Fade bottom>
       <Container className={classes.container}>
-      
         <Typography variant="h4" className={classes.section} component="h2">
            How it works
         </Typography>
@@ -97,6 +98,7 @@ function ProductHowItWorks(props) {
           </Grid>
         </Grid>
       </Container>
+      </Fade>
     </section>
   );
 }

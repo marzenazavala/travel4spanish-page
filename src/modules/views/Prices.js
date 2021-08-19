@@ -7,12 +7,16 @@ import {ReactComponent as Fish} from '../../icons/fish.svg'
 import {ReactComponent as Dolphin} from '../../icons/dolphin.svg'
 import {ReactComponent as Turtle} from '../../icons/turtle.svg'
 import {Bounce, Fade} from 'react-reveal';
+import backgroundImage from '../../img/blue.png'
 
 
 const styles = (theme) => ({
   root: {
     display: 'flex',
     overflow: 'hidden',
+		// backgroundImage: `url(${backgroundImage})`,
+		// backgroundPosition: 'relative',
+		// backgroundRepeat: 'no-repeat',
   },
 	container: {
     marginTop: theme.spacing(1),
@@ -21,11 +25,9 @@ const styles = (theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-		backgroundColor: 'white',
-
   },
 	prices: {
-		marginBottom: theme.spacing(5)
+		marginBottom: theme.spacing(5),
 	},
 	priceCard: {
 		display: 'flex',
@@ -39,11 +41,9 @@ const styles = (theme) => ({
 		backgroundColor: '#88d8f7',
 		position: 'relative',
 		top: 40,
-		zIndex: 4,
 	},
 	icon: {
     height: theme.spacing(8),
-		zIndex: 5,
   },
 })
 
@@ -51,7 +51,9 @@ const Prices = ({classes}) => {
   return (
 		<section className={classes.root} id="prices">
 			<Container className={classes.container}>
-			<HeadTitle title="Choose the best option" classes={classes}/>
+			<Fade bottom>
+				<HeadTitle title="Choose the best option" classes={classes}/>
+			</Fade>
 			<div className={classes.prices}>
 			<Grid container spacing={2}>
           <Grid item xs={12} md={4} className={classes.priceCard}>

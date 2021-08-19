@@ -5,10 +5,7 @@ import Button from '../components/Button';
 import Typography from '../components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
 import backgroundImage from '../../img/header2.png'
-
-
-
-
+import {Fade, Flip, Zoom} from 'react-reveal';
 
 const styles = (theme) => ({
   background: {
@@ -38,7 +35,6 @@ const styles = (theme) => ({
   },
   more: {
     marginTop: theme.spacing(3),
-    
   },
 });
 
@@ -49,9 +45,12 @@ function ProductHero(props) {
     <ProductHeroLayout backgroundClassName={classes.background}>
       {/* Increase the network loading priority of the background image. */}
       <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
+      <Fade left delay={1500}>
       <Typography color="inherit" align="center" variant="h1" className={classes.more}>
         Trying to upgrade your Spanish?
       </Typography>
+      </Fade>
+      <Flip top delay={2500}>
       <Button
         size="large"
         className={classes.button}
@@ -60,12 +59,17 @@ function ProductHero(props) {
       >
         Book Free Session
       </Button>
+      </Flip>
+      <Fade right delay={1500}>
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
         Enjoy Travel4Spanish community and learn Spanish with native speakers
       </Typography>
+      </Fade>
+      <Fade bottom delay={2000}>
       <Typography variant="h2" color="inherit" className={classes.more}>
         Discover our 8 Steps Method
       </Typography>
+      </Fade>
     </ProductHeroLayout>
   );
 }
