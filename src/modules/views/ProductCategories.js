@@ -125,7 +125,7 @@ function ProductCategories(props) {
         'https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80',
       title: 'Community',
       width: '38%',
-      href: '/8-steps'
+      href: 'https://www.facebook.com/travel4spanish'
     },
     {
       url:

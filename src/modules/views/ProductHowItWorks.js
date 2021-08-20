@@ -56,11 +56,14 @@ function ProductHowItWorks(props) {
 
   return (
     <section className={classes.root} id="how">
-      <Fade bottom>
+      
       <Container className={classes.container}>
+      <Fade bottom>
         <Typography variant="h4" className={classes.section} component="h2">
            How it works
         </Typography>
+        </Fade>
+        <Fade bottom>
         <Grid container spacing={5}>
         
           <Grid item xs={12} md={4}>
@@ -97,8 +100,9 @@ function ProductHowItWorks(props) {
             </div>
           </Grid>
         </Grid>
+        </Fade>
       </Container>
-      </Fade>
+      
     </section>
   );
 }
