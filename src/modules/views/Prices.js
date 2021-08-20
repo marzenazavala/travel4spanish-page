@@ -6,6 +6,7 @@ import PriceBox from '../components/PriceBox';
 import {ReactComponent as Fish} from '../../icons/fish.svg'
 import {ReactComponent as Dolphin} from '../../icons/dolphin.svg'
 import {ReactComponent as Turtle} from '../../icons/turtle.svg'
+import {ReactComponent as Boat} from '../../icons/boat.svg'
 import {Bounce, Fade} from 'react-reveal';
 import backgroundImage from '../../img/blue.png'
 
@@ -43,7 +44,7 @@ const styles = (theme) => ({
 		top: 40,
 	},
 	icon: {
-    height: theme.spacing(8),
+    height: theme.spacing(5),
   },
 })
 
@@ -56,7 +57,7 @@ const Prices = ({classes}) => {
 			</Fade>
 			<div className={classes.prices}>
 			<Grid container spacing={2}>
-          <Grid item xs={12} md={4} className={classes.priceCard}>
+          <Grid item xs={12} md={3} className={classes.priceCard}>
 						<Bounce bottom delay={500}>
 							<Avatar elevation={1} className={classes.avatar}>
 								<Turtle className={classes.icon}/>
@@ -71,9 +72,10 @@ const Prices = ({classes}) => {
 								period='each 2 weeks'
 								lesson="$25 for lesson"
 								elevation={1}
+
 							/>
           </Grid>
-          <Grid item xs={12} md={4} className={classes.priceCard}>
+          <Grid item xs={12} md={3} className={classes.priceCard}>
 						<Bounce bottom delay={500}>
 							<Avatar className={classes.avatar}>
 								<Fish className={classes.icon}/>
@@ -88,9 +90,10 @@ const Prices = ({classes}) => {
 								period='each 4 weeks'
 								lesson="$20 for lesson"
 								elevation={9}
+								best={true}
 							/>
           </Grid>
-          <Grid item xs={12} md={4} className={classes.priceCard}>
+          <Grid item xs={12} md={3} className={classes.priceCard}>
 						<Bounce bottom delay={500}>
 							<Avatar className={classes.avatar}>
 								<Dolphin className={classes.icon}/>
@@ -106,6 +109,23 @@ const Prices = ({classes}) => {
 								lesson="$30 for lesson"
 								elevation={1}
 								/>
+          </Grid>
+					<Grid item xs={12} md={3} className={classes.priceCard}>
+						<Bounce bottom delay={500}>
+							<Avatar elevation={1} className={classes.avatar}>
+								<Boat className={classes.icon}/>
+							</Avatar>
+						</Bounce>
+							<PriceBox 
+								title='In group of 4' 
+								price='$60' 
+								desc1='2 coaching sessions'
+								desc2='6 lessons with mentor'
+								desc3='8 steps for studying'
+								period='each 2 weeks'
+								lesson="$10 for lesson"
+								elevation={1}
+							/>
           </Grid>
         </Grid>
 				</div>

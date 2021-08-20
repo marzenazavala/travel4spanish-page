@@ -104,8 +104,16 @@ function AppFooter(props) {
               </ul>
 
             <Grid item xs={12} className={classes.icons}>
-              <FacebookIcon className={classes.icon}/>
-              <TwitterIcon className={classes.icon}/> 
+              <Link href='https://www.facebook.com/travel4spanish'>
+              <FacebookIcon 
+                className={classes.icon}
+              />
+              </Link>
+              <Link href='https://twitter.com/Travel4_Spanish'>
+              <TwitterIcon 
+                className={classes.icon}
+              /> 
+              </Link>
             </Grid>
             <Grid item xs={12}>
               <Copyright />

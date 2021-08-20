@@ -25,6 +25,14 @@ const styles = (theme) => ({
 			border: '4px solid orange',
 			backgroundColor: 'white',
 		},
+		best: {
+			display: 'flex',
+			flexDirection: 'column',
+			alignItems: 'center',
+			padding: theme.spacing(6,4,1,4),
+			border: '4px solid orange',
+			backgroundColor: '#caeefc',
+		},
 		title: {
 			marginBottom: theme.spacing(3)
 		},
@@ -49,10 +57,11 @@ const styles = (theme) => ({
 		}
 })
 
-const PriceBox = ({title, price, desc1, desc2, desc3, classes, period, elevation, lesson}) => {
-  return (
+const PriceBox = ({title, price, desc1, desc2, desc3, classes, period, elevation, lesson, best}) => {
+	
+	return (
 		<Paper elevation={elevation} className={classes.root}>
-			<div className={classes.item}>
+			<div className={best ? classes.best : classes.item}>
 			<Typography variant="h6" component="span" className={classes.title}>
 				{title}
 			</Typography>

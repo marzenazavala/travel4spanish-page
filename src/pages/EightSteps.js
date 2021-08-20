@@ -146,9 +146,9 @@ const EightSteps = () => {
 							</Grid>
 						</Grid>
           </Grid>
-					<Grid item xs={12} sm={12}>
+					{/* <Grid item xs={12} sm={12}>
 						<img alt="travel4spanish" className={classes.feetMid} src={steps2}/>
-					</Grid>
+					</Grid> */}
           <Grid item xs={12} sm={6}>
 					<Grid container spacing={4} className={classes.margin}>
 							<Grid item xs={12} sm={12}>
@@ -190,9 +190,9 @@ const EightSteps = () => {
 						<img alt="travel4spanish" className={classes.image} src={image2}/>
 						</Zoom>
           </Grid>
-					<Grid item xs={12} sm={12}>
+					{/* <Grid item xs={12} sm={12}>
 						<img alt="travel4spanish"  className={classes.feetMid} src={steps1}/>
-					</Grid>
+					</Grid> */}
           <Grid item xs={12} sm={6}>
 		  <Zoom>
 						<img alt="travel4spanish" className={classes.image} src={image3}/>
@@ -234,9 +234,9 @@ const EightSteps = () => {
 							</Grid>
 						</Grid>
           </Grid>
-					<Grid item xs={12} sm={12}>
+					{/* <Grid item xs={12} sm={12}>
 						<img alt="travel4spanish" className={classes.feetMid} src={steps2}/>
-					</Grid>
+					</Grid> */}
           <Grid item xs={12} sm={6}>
 					<Grid container spacing={4} className={classes.margin}>
 							<Grid item xs={12} sm={12}>
