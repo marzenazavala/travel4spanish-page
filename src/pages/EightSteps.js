@@ -216,14 +216,14 @@ const EightSteps = () => {
 						</Zoom>
           </Grid>
 		  			<Grid item xs={12} sm={12}>
-		  				<Fade bottom>
+		  				<Zoom>
 							<Pineapple className={classes.icon}/>
-						</Fade>
+						</Zoom>
 					</Grid>
           <Grid item xs={12} sm={6}>
-		  <Zoom>
+		  			<Zoom>
 						<img alt="travel4spanish" className={classes.image} src={image3}/>
-						</Zoom>
+					</Zoom>
           </Grid>
           <Grid item xs={12} sm={6}>
 					<Grid container spacing={5} className={classes.margin}>

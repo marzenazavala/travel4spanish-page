@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
+import {Grid, Paper} from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
 import {Fade} from 'react-reveal'
@@ -17,16 +17,18 @@ const styles = (theme) => ({
   },
   container: {
     marginTop: theme.spacing(15),
-    marginBottom: theme.spacing(10),
+    marginBottom: theme.spacing(1),
     display: 'flex',
     position: 'relative',
+    top: -100
   },
   item: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     padding: theme.spacing(5, 5),
-    border: '4px dashed orange',
+    border: '4px solid orange',
+    backgroundColor: 'white'
   },
   image: {
     height: 65,
@@ -48,15 +50,10 @@ function ProductValues(props) {
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
-        <img
-          src="/static/themes/onepirate/productCurvyLines.png"
-          className={classes.curvyLines}
-          alt="curvy lines"
-        />
-        <Grid container spacing={5}>
+        <Grid container spacing={5} >
           <Grid item xs={12} md={4}>
-          <Fade left>
-            <div className={classes.item}>
+          <Fade bottom>
+            <Paper className={classes.item} elevation={9}>
               <Shirt fontSize="large" className={classes.image}/>
               <Typography variant="h6" className={classes.title}>
                 Learn with mentor
@@ -64,12 +61,12 @@ function ProductValues(props) {
               <Typography variant="h5">
                 {"Your personal mentor will show you the fastest way to master Spanish. He will guide you according to your learning goals."}
               </Typography>
-            </div>
+            </Paper>
             </Fade>
           </Grid>
           <Grid item xs={12} md={4}>
           <Fade bottom>
-            <div className={classes.item}>
+          <Paper className={classes.item} elevation={9}>
             <Torch className={classes.image}/>
               <Typography variant="h6" className={classes.title}>
                 Constant guidance
@@ -77,12 +74,12 @@ function ProductValues(props) {
               <Typography variant="h5">
               {"We provide constant support from our mentors at every stage of learning. We will show you the optimal educational techniques."}
               </Typography>
-            </div>
+            </Paper>
             </Fade>
           </Grid>
           <Grid item xs={12} md={4}>
-          <Fade right>
-            <div className={classes.item}>
+          <Fade bottom>
+          <Paper className={classes.item} elevation={9}>
             <Teacher fontSize="large" className={classes.image}/>
               <Typography variant="h6" className={classes.title}>
                 Native Speakers
@@ -90,7 +87,7 @@ function ProductValues(props) {
               <Typography variant="h5">
               {"Our teachers are native speakers with enthusiasm and enthusiasm to guide you on your Spanish journey."}
               </Typography>
-            </div>
+            </Paper>
             </Fade>
           </Grid>
         </Grid>
