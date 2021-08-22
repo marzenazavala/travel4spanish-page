@@ -8,7 +8,7 @@ const MailchimpFormContainer = props => {
   const postUrl = `https://zionscoders.us10.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&id=${process.env.REACT_APP_MAILCHIMP_ID}`
 
   return (
-    <div className="mc__form-container">
+    <div >
       <MailchimpSubscribe 
         url={postUrl}
         render={({ subscribe, status, message }) => (

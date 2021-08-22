@@ -35,6 +35,7 @@ const styles = (theme) => ({
     backgroundColor: theme.palette.common.black,
     opacity: 0.5,
     zIndex: -1,
+    height: '90vh'
   },
   background: {
     position: 'absolute',

@@ -8,19 +8,23 @@ import {ReactComponent as Dolphin} from '../../icons/dolphin.svg'
 import {ReactComponent as Turtle} from '../../icons/turtle.svg'
 import {ReactComponent as Boat} from '../../icons/boat.svg'
 import {Bounce, Fade} from 'react-reveal';
-import backgroundImage from '../../img/blue.png'
+import backgroundImage from '../../img/beach.jpg'
 
 
 const styles = (theme) => ({
   root: {
     display: 'flex',
     overflow: 'hidden',
-		// backgroundImage: `url(${backgroundImage})`,
-		// backgroundPosition: 'relative',
-		// backgroundRepeat: 'no-repeat',
+		backgroundImage: `url(${backgroundImage})`,
+		backgroundPosition: 'center',
+		backgroundRepeat: 'no-repeat',
+		minHeight: '500px',
+		backgroundAttachment: 'fixed',
+  		backgroundSize: 'cover',
+
   },
 	container: {
-    marginTop: theme.spacing(1),
+    marginTop: theme.spacing(5),
     marginBottom: theme.spacing(10),
     display: 'flex',
     flexDirection: 'column',

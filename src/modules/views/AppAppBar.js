@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//import clsx from 'clsx';
+import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
@@ -93,6 +93,18 @@ function AppAppBar(props) {
             {/* <NavLink
               variant="h6"
               underline="none"
+              className={clsx(classes.rightLink, classes.linkSecondary)}
+              to="/signup"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "white"
+              }}
+            >
+              {'Sign Up'}
+            </NavLink>  */}
+            {/* <NavLink
+              variant="h6"
+              underline="none"
               className={classes.rightLink}
               to="/prices"
               activeStyle={{
@@ -123,14 +135,7 @@ function AppAppBar(props) {
             >
               {'Sign In'}
             </Link>
-            <Link
-              variant="h6"
-              underline="none"
-              className={clsx(classes.rightLink, classes.linkSecondary)}
-              href="/premium-themes/onepirate/sign-up/"
-            >
-              {'Sign Up'}
-            </Link> */}
+            */}
           </div>
         </Toolbar>
       </AppBar>

@@ -6,26 +6,29 @@ import Grid from '@material-ui/core/Grid';
 import Button from '../modules/components/Button';
 import {Fade, Flip, Zoom} from 'react-reveal';
 import {Link} from 'react-scroll'
-import image1 from '../img/8_steps.png';
+import image1 from '../img/8_s_4.png';
 import image2 from '../img/8_s_1.png';
 import image3 from '../img/8_s_2.png';
-import image5 from '../img/8_s_4.png';
-import steps1 from '../img/feet1.png';
-import steps2 from '../img/feet2.png';
+import image4 from '../img/8_s_5.png';
 import orange from '../img/orange.png';
 import white from '../img/white.png';
 import blue from '../img/blue.png';
 import Typography from '../modules/components/Typography';
 import HeadTitle from '../components/HeadTitle';
+import {ReactComponent as Fish} from '../icons/shellfish.svg'
+import {ReactComponent as Pavilion} from '../icons/pavilion.svg'
+import {ReactComponent as Surf} from '../icons/surf-board.svg'
+import {ReactComponent as Pineapple} from '../icons/pineapple.svg'
+import backgroundImage from '../img/beach.jpg'
 
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
-			marginTop: theme.spacing(5)
+		marginTop: theme.spacing(5)
     },
     paper: {
       padding: theme.spacing(2),
-      textAlign: 'center',
+      textAlign: 'left',
       color: theme.palette.text.secondary,
     },
 		margin: {
@@ -40,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 			color: 'black',
 			width: '100%',
 			padding: theme.spacing(0),
-    	border: '3px dashed black',
+    		border: '1px dashed black',
 			fontSize: '1rem',
 		},
 		mentor: {
@@ -48,11 +51,11 @@ const useStyles = makeStyles((theme) => ({
 			color: 'black',
 			width: '100%',
 			padding: theme.spacing(0),
-    	border: '3px dashed black',
+    		border: '1px dashed black',
 			fontSize: '1rem',
 		},
 		feet: {
-			width: '12%',
+			width: '5%',
 		},
 		feetMid: {
 			width: '12%',
@@ -62,14 +65,14 @@ const useStyles = makeStyles((theme) => ({
 			color: 'black',
 			width: '100%',
 			padding: theme.spacing(1,0),
-    	border: '3px dashed black',
+    		border: '1px dashed black',
 			fontSize: '1rem'
 		},
 		button: {
 			border: '4px solid orange',
 			borderRadius: 5,
 			height: '20%',
-			margin: theme.spacing(2, 3),
+			margin: theme.spacing(1),
 			padding: theme.spacing(2),
 			backgroundColor: '#88d8f7',
 			color: 'black',
@@ -80,7 +83,24 @@ const useStyles = makeStyles((theme) => ({
 			}
 		  },
 		  legend: {
-			  marginTop: theme.spacing(4)
+			  marginTop: theme.spacing(4),
+			  marginBottom: theme.spacing(4)
+		  },
+		  icon: {
+			height: theme.spacing(7),
+			marginBottom: theme.spacing(2)
+		  },
+		  copy: {
+			display: 'flex',
+			flexDirection: 'column',
+			alignItems: 'center',
+			justifyContent: 'center',
+			// backgroundImage: `url(${backgroundImage})`,
+			// backgroundPosition: 'center',
+			// backgroundRepeat: 'no-repeat',
+			// minHeight: '200px',
+			// backgroundAttachment: 'fixed',
+			// backgroundSize: 'cover',
 		  }
   }));
 
@@ -104,26 +124,26 @@ const EightSteps = () => {
 						<h3>8 steps with study material</h3>
 					</Grid>
 				</Grid>
-        <Grid container spacing={3}>
+        <Grid container spacing={1}>
           <Grid item xs={12} sm={6}>
 		  	<Zoom>
-            	<img alt="travel4spanish"className={classes.image} src={image5}/>
+            	<img alt="travel4spanish"className={classes.image} src={image1}/>
 			</Zoom>
           </Grid>
 					<Grid item xs={12} sm={6}>
-						<Grid container spacing={4} className={classes.margin}>
+						<Grid container spacing={5} className={classes.margin}>
 							<Grid item xs={12} sm={12}>
 							<Fade bottom delay={500}>
 								<Paper elevation={0} className={classes.prize}>
-									<h2>Start your Spanish Mile</h2>
-									<h3>Goals session with language couch</h3>
+								<Typography variant="h6" component="span">Start your Spanish mile</Typography>
+									<p>Goals session with language couch</p>
 								</Paper>
 							</Fade>
 							</Grid>
 							<Grid item xs={12} sm={12}>
 							<Fade bottom delay={500}>
 								<Paper elevation={0} className={classes.mentor}>
-									<h3>Day 1</h3>
+								<Typography variant="h6" component="span">Day 1</Typography>
 									<p>Lesson online with your mentor</p>
 								</Paper>
 							</Fade>
@@ -131,7 +151,7 @@ const EightSteps = () => {
 							<Grid item xs={12} sm={12}>
 							<Fade bottom delay={500}>
 								<Paper elevation={0} className={classes.steps}>
-									<h3>Day 2</h3>
+								<Typography variant="h6" component="span">Day 2</Typography>
 									<p>Practice material from Step 1</p>
 								</Paper>
 							</Fade>
@@ -139,22 +159,27 @@ const EightSteps = () => {
 							<Grid item xs={12} sm={12}>
 							<Fade bottom delay={500}>
 								<Paper elevation={0} className={classes.steps}>
-									<h3>Day 3</h3>
+								<Typography variant="h6" component="span">Day 3</Typography>
 									<p>Practice tasks from Step 2</p>
 								</Paper>
 							</Fade>
 							</Grid>
+							
 						</Grid>
+						{/* <Typography variant="h5" component="span">Something to tell</Typography> */}
           </Grid>
-					{/* <Grid item xs={12} sm={12}>
-						<img alt="travel4spanish" className={classes.feetMid} src={steps2}/>
-					</Grid> */}
+					<Grid item xs={12} sm={12} className={classes.copy}>
+						<Fade left>
+							<Fish className={classes.icon}/>
+							<Typography variant="h2" component="span">Spend your learning time with fun</Typography>
+						</Fade>
+					</Grid>
           <Grid item xs={12} sm={6}>
-					<Grid container spacing={4} className={classes.margin}>
+					<Grid container spacing={5} className={classes.margin}>
 							<Grid item xs={12} sm={12}>
 							<Fade bottom delay={500}>
 								<Paper elevation={0} className={classes.steps}>
-									<h3>Day 4</h3>
+								<Typography variant="h6" component="span">Day 4</Typography>
 									<p>Book lesson & practice tasks from Step 3</p>
 								</Paper>
 							</Fade>
@@ -162,7 +187,7 @@ const EightSteps = () => {
 							<Grid item xs={12} sm={12}>
 							<Fade bottom delay={500}>
 								<Paper elevation={0} className={classes.mentor}>
-									<h3>Day 5</h3>
+								<Typography variant="h6" component="span">Day 5</Typography>
 									<p>Practice material with your mentor</p>
 								</Paper>
 							</Fade>
@@ -170,7 +195,7 @@ const EightSteps = () => {
 							<Grid item xs={12} sm={12}>
 							<Fade bottom delay={500}>
 								<Paper elevation={0} className={classes.steps}>
-									<h3>Day 6</h3>
+								<Typography variant="h6" component="span">Day 6</Typography>
 									<p>Practice tasks from Step 4</p>
 								</Paper>
 								</Fade>
@@ -178,7 +203,7 @@ const EightSteps = () => {
 							<Grid item xs={12} sm={12}>
 							<Fade bottom delay={500}>
 								<Paper elevation={0} className={classes.mentor}>
-									<h3>Day 7</h3>
+								<Typography variant="h6" component="span">Day 7</Typography>
 									<p>Practice material from Step 4 with your mentor</p>
 								</Paper>
 								</Fade>
@@ -190,20 +215,22 @@ const EightSteps = () => {
 						<img alt="travel4spanish" className={classes.image} src={image2}/>
 						</Zoom>
           </Grid>
-					{/* <Grid item xs={12} sm={12}>
-						<img alt="travel4spanish"  className={classes.feetMid} src={steps1}/>
-					</Grid> */}
+		  			<Grid item xs={12} sm={12}>
+		  				<Fade bottom>
+							<Pineapple className={classes.icon}/>
+						</Fade>
+					</Grid>
           <Grid item xs={12} sm={6}>
 		  <Zoom>
 						<img alt="travel4spanish" className={classes.image} src={image3}/>
 						</Zoom>
           </Grid>
           <Grid item xs={12} sm={6}>
-					<Grid container spacing={4} className={classes.margin}>
+					<Grid container spacing={5} className={classes.margin}>
 							<Grid item xs={12} sm={12}>
 							<Fade bottom delay={500}>
 								<Paper elevation={0} className={classes.steps}>
-									<h3>Day 8</h3>
+								<Typography variant="h6" component="span">Day 8</Typography>
 									<p>Practice material from Step 5</p>
 								</Paper>
 								</Fade>
@@ -211,7 +238,7 @@ const EightSteps = () => {
 							<Grid item xs={12} sm={12}>
 							<Fade bottom delay={500}>
 								<Paper elevation={0} className={classes.steps}>
-									<h3>Day 9</h3>
+								<Typography variant="h6" component="span">Day 9</Typography>
 									<p>Practice tasks from Step 6</p>
 								</Paper>
 								</Fade>
@@ -219,7 +246,7 @@ const EightSteps = () => {
 							<Grid item xs={12} sm={12}>
 							<Fade bottom delay={500}>
 								<Paper elevation={0} className={classes.mentor}>
-									<h3>Day 10</h3>
+								<Typography variant="h6" component="span">Day 10</Typography>
 									<p>Practice tasks from Step 5 and 6 with mentor</p>
 								</Paper>
 								</Fade>
@@ -227,22 +254,25 @@ const EightSteps = () => {
 							<Grid item xs={12} sm={12}>
 							<Fade bottom delay={500}>
 								<Paper elevation={0} className={classes.steps}>
-									<h3>Day 11</h3>
+								<Typography variant="h6" component="span">Day 11</Typography>
 									<p>Practice tasks from Step 7</p>
 								</Paper>
 							</Fade>
 							</Grid>
 						</Grid>
           </Grid>
-					{/* <Grid item xs={12} sm={12}>
-						<img alt="travel4spanish" className={classes.feetMid} src={steps2}/>
-					</Grid> */}
+		  			<Grid item xs={12} sm={12} className={classes.copy}>
+						<Fade right>
+							<Surf className={classes.icon}/>
+							<Typography variant="h2" component="span">Each step brings more Spanish skills</Typography>
+						</Fade>
+					</Grid>
           <Grid item xs={12} sm={6}>
-					<Grid container spacing={4} className={classes.margin}>
+					<Grid container spacing={5} className={classes.margin}>
 							<Grid item xs={12} sm={12}>
 							<Fade bottom delay={500}>
 								<Paper elevation={0} className={classes.mentor}>
-									<h3>Day 12</h3>
+								<Typography variant="h6" component="span">Day 12</Typography>
 									<p>Practice material from Step 7 with mentor</p>
 								</Paper>
 							</Fade>
@@ -250,7 +280,7 @@ const EightSteps = () => {
 							<Grid item xs={12} sm={12}>
 							<Fade bottom delay={500}>
 								<Paper elevation={0} className={classes.steps}>
-									<h3>Day 13</h3>
+								<Typography variant="h6" component="span">Day 13</Typography>
 									<p>Practice material from Step 8</p>
 								</Paper>
 							</Fade>
@@ -258,7 +288,7 @@ const EightSteps = () => {
 							<Grid item xs={12} sm={12}>
 							<Fade bottom delay={500}>
 								<Paper elevation={0} className={classes.mentor}>
-									<h3>Day 14</h3>
+								<Typography variant="h6" component="span">Day 14</Typography>
 									<p>Practice tasks from Step 8 with mentor</p>
 								</Paper>
 							</Fade>
@@ -266,16 +296,17 @@ const EightSteps = () => {
 							<Grid item xs={12} sm={12}>
 							<Fade bottom delay={500}>
             		<Paper elevation={0} className={classes.prize}>
-									<h2>Congratulations!!! You finished your Mile</h2>
-									<h3>Take your Prize and set next goals/retro session</h3>
+						<Typography variant="h6" component="span">Congratulations!!! You finished your Mile</Typography>
+						<p>Take your Prize and set next goals/retro session</p>
 								</Paper>
 							</Fade>
-          		</Grid>  
-						</Grid>
+							
+          			</Grid>  
+				</Grid>
           </Grid>
 					<Grid item xs={12} sm={6}>
 						<Zoom>
-						<img alt="travel4spanish" className={classes.image} src={image1}/>
+						<img alt="travel4spanish" className={classes.image} src={image4}/>
 						</Zoom>
           </Grid>
 					<Grid item xs={12} sm={12}>
@@ -294,7 +325,7 @@ const EightSteps = () => {
 					</Grid>
 					<Grid item xs={12} sm={12}>
 						<Link to="top" spy={true} smooth={true} >
-							<img alt="travel4spanish" className={classes.feetMid} src={steps1}/>
+							<Pavilion className={classes.icon}/>
 						</Link>
 					</Grid>
         </Grid>

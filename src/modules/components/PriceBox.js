@@ -31,7 +31,7 @@ const styles = (theme) => ({
 			alignItems: 'center',
 			padding: theme.spacing(6,4,1,4),
 			border: '4px solid orange',
-			backgroundColor: '#caeefc',
+			backgroundColor: 'rgb(202, 238, 252)',
 		},
 		title: {
 			marginBottom: theme.spacing(3)
@@ -81,13 +81,13 @@ const PriceBox = ({title, price, desc1, desc2, desc3, classes, period, elevation
 				<Typography variant="h6" component="span">{period}</Typography>
 				<Typography component="span">{lesson}</Typography>
 				</Fade>
-				{/* <Fade delay={2000}>
-				<Button className={classes.button}>
-          <Typography variant="h6" component="span" >
-            Buy now
-          </Typography>
-        </Button>
-				</Fade> */}
+				<Fade delay={2000}>
+					<Button className={classes.button}>
+          				<Typography variant="h6" component="span" >
+            				{'Buy now'}
+          				</Typography>
+        			</Button>
+				</Fade>
 			</div>	
 		</Paper>
 	)

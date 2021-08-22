@@ -6,7 +6,8 @@ import {
 import './App.css';
 import Home from './Home';
 import AppAppBar from './modules/views/AppAppBar';
-import EightSteps from './pages/EightSteps'
+import EightSteps from './pages/EightSteps';
+
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/8-steps" component={EightSteps} />
+        <Route path="/signup" component={EightSteps} />
       </Switch>
     </div>
   );
