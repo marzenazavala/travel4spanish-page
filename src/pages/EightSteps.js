@@ -82,6 +82,18 @@ const useStyles = makeStyles((theme) => ({
 				color: 'black'
 			}
 		  },
+		  button2: {
+			minWidth: 200,
+			backgroundColor: 'orange',
+			marginTop: theme.spacing(0),
+			marginBottom: theme.spacing(2),
+			border: '3px solid black',
+			'&:hover': {
+			  backgroundColor: "orange",
+			  position: 'relative',
+			  top: -2
+			},
+		  },
 		  legend: {
 			  marginTop: theme.spacing(4),
 			  marginBottom: theme.spacing(4)
@@ -313,7 +325,7 @@ const EightSteps = () => {
 					<Flip bottom delay={1000}>
 						<Button
 							size="large"
-							className={classes.button}
+							className={classes.button2}
 							component="a"
 							href="https://travel4spanish.setmore.com/"
 						>

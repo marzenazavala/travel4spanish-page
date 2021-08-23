@@ -24,10 +24,12 @@ const styles = (theme) => ({
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(0),
     border: '4px solid white',
+    color: 'white',
     '&:hover': {
-      backgroundColor: "white",
+      backgroundColor: "orange",
       color: 'black',
-      border: '4px solid #88d8f7',
+      position: 'relative',
+      top: -1
     },
   },
   h5: {

@@ -22,7 +22,9 @@ const styles = (theme) => ({
     height: 'auto',
     padding: theme.spacing(2, 5),
     "&:hover": {
-      background: "#88d8f7"
+      backgroundColor: 'rgb(202, 238, 252)',
+      position: 'relative',
+      top: -2
     }
   },
   link: {

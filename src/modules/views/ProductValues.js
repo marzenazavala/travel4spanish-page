@@ -53,7 +53,7 @@ function ProductValues(props) {
         <Grid container spacing={5} >
           <Grid item xs={12} md={4}>
           <Fade bottom>
-            <Paper className={classes.item} elevation={9}>
+            <Paper className={classes.item} elevation={8}>
               <Shirt fontSize="large" className={classes.image}/>
               <Typography variant="h6" className={classes.title}>
                 Learn with mentor
@@ -66,7 +66,7 @@ function ProductValues(props) {
           </Grid>
           <Grid item xs={12} md={4}>
           <Fade bottom>
-          <Paper className={classes.item} elevation={9}>
+          <Paper className={classes.item} elevation={8}>
             <Torch className={classes.image}/>
               <Typography variant="h6" className={classes.title}>
                 Constant guidance
@@ -79,7 +79,7 @@ function ProductValues(props) {
           </Grid>
           <Grid item xs={12} md={4}>
           <Fade bottom>
-          <Paper className={classes.item} elevation={9}>
+          <Paper className={classes.item} elevation={8}>
             <Teacher fontSize="large" className={classes.image}/>
               <Typography variant="h6" className={classes.title}>
                 Native Speakers

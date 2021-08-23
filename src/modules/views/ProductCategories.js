@@ -4,11 +4,13 @@ import { withStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
+import {Fade} from 'react-reveal';
+import {ReactComponent as Volcano} from '../../icons/volcano.svg'
 
 
 const styles = (theme) => ({
   root: {
-    marginTop: theme.spacing(8),
+    marginTop: theme.spacing(0),
     marginBottom: theme.spacing(4),
   },
   images: {
@@ -138,10 +140,20 @@ function ProductCategories(props) {
 
   return (
     <Container className={classes.root} component="section">
-      {/* <Dolphin className={classes.icon}/> */}
-      <Typography variant="h4" align="center" component="h2">
-        Start your Spanish journey
-      </Typography>
+      <Fade bottom>  
+        <Volcano className={classes.icon}/>
+      </Fade>
+      <Fade bottom>
+        <Typography variant="h7" align="center" component="h2">
+        "Even the furthest journey begins with the first step"
+        </Typography>
+        <Typography variant="h5" align="center" component="h2">
+        Lao Tzu, Chinese philosopher and founder of Taoism
+        </Typography>
+        <Typography variant="h4" align="center" component="h2">
+          Start your Spanish journey
+        </Typography>
+      </Fade>
       <div className={classes.images} >
         {images.map((image) => (
           <ButtonBase

@@ -43,8 +43,10 @@ const styles = (theme) => ({
 			padding: theme.spacing(2, 5),
 			backgroundColor: '#88d8f7',
 			"&:hover": {
-					backgroundColor: 'orange',
-					color: 'black',
+				backgroundColor: 'orange',
+				color: 'black',
+				position: 'relative',
+				top: -1
 			}
 		},
 		price:{
