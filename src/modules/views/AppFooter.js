@@ -26,7 +26,7 @@ const styles = (theme) => ({
   root: {
     display: 'flex',
     overflow: 'hidden',
-    backgroundColor: theme.palette.warning.dark
+    backgroundColor: '#f8e492'
   },
   container: {
     marginTop: theme.spacing(2),

@@ -5,6 +5,8 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
 import Logo from '../../img/T4SLogo3.png'
+import Logo1 from '../../img/t4s_logo1.png'
+import Logo2 from '../../img/t4s_logo2.png'
 import {Link as ScrollLink} from 'react-scroll'
 import {NavLink} from 'react-router-dom';
 import Link from '@material-ui/core/Link';
@@ -33,12 +35,15 @@ const styles = (theme) => ({
     fontSize: 16,
     color: 'black',
     marginLeft: theme.spacing(3),
+    '&:hover':{
+      color: 'white'
+    }
   },
   linkSecondary: {
     color: 'black',
   },
   logo: {
-    width: "70px"
+    width: "90px"
   }
 });
 
@@ -51,7 +56,7 @@ function AppAppBar(props) {
         <Toolbar className={classes.toolbar}>
           <div className={classes.left} />
           <Link href="/">
-             <img src={Logo} alt="Logo travel4spanish" className={classes.logo}/>
+             <img src={Logo1} alt="Logo travel4spanish" className={classes.logo}/>
           </Link>
           <div className={classes.right}>
           {/* <NavLink
@@ -78,7 +83,32 @@ function AppAppBar(props) {
             >
               {'Team'}
             </NavLink> */}
-          <NavLink
+            <NavLink
+              variant="h6"
+              underline="none"
+              className={classes.rightLink}
+              to="/register"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "white"
+              }}
+            >
+              {'REGISTER'}
+            </NavLink>
+            <NavLink
+              color="inherit"
+              variant="h6"
+              underline="none"
+              className={classes.rightLink}
+              to="/login"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "white"
+              }}
+            >
+              {'LOGIN'}
+            </NavLink>
+            <NavLink
               variant="h6"
               underline="none"
               className={classes.rightLink}
@@ -88,20 +118,8 @@ function AppAppBar(props) {
                 color: "white"
               }}
             >
-              {'8 Steps Method'}
+              {'8 STEPS'}
             </NavLink>
-            {/* <NavLink
-              variant="h6"
-              underline="none"
-              className={clsx(classes.rightLink, classes.linkSecondary)}
-              to="/signup"
-              activeStyle={{
-                fontWeight: "bold",
-                color: "white"
-              }}
-            >
-              {'Sign Up'}
-            </NavLink>  */}
             {/* <NavLink
               variant="h6"
               underline="none"
@@ -126,16 +144,7 @@ function AppAppBar(props) {
             >
               {'Contact'}
             </NavLink> */}
-            {/* <Link
-              color="inherit"
-              variant="h6"
-              underline="none"
-              className={classes.rightLink}
-              href="/premium-themes/onepirate/sign-in/"
-            >
-              {'Sign In'}
-            </Link>
-            */}
+         
           </div>
         </Toolbar>
       </AppBar>
