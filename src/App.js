@@ -11,6 +11,7 @@ import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import ProfilePage from './pages/ProfilePage';
 import AuthProvider from './contexts/AuthContext';
+import PrivateRoute from './components/PrivateRoute';
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
             <Route path="/8-steps" component={EightSteps} />
             <Route path="/register" component={SignUp} />
             <Route path="/login" component={Login} />
-            <Route path="/profile" component={ProfilePage} />
+            <PrivateRoute path="/profile" component={ProfilePage} />
           </Switch>
         </AuthProvider>
       </Router>

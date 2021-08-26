@@ -115,7 +115,7 @@ const ProfilePage = () => {
 						<Avatar className={classes.avatar}>
 							<img src={avatar} alt="avatar" className={classes.image}/>
 						</Avatar>
-						<Typography variant="body2" component="h6">{currentUser && currentUser.email}</Typography>
+						<Typography variant="body2" component="h6">{currentUser.email}</Typography>
 						{error ? 
           	<Typography component="span" variant="body2" className={classes.error}>{error}</Typography> : null}
 						<Link to='/edit-profile'>Edit Profile</Link>
