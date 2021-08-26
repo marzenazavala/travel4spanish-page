@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import {Button, Paper, Hidden} from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 // import Link from '@material-ui/core/Link';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -88,6 +88,7 @@ const Login = () => {
 	const {login} = useAuth();
 	const [error, setError] = useState('')
 	const [loading, setLoading] = useState(false)
+  const history = useHistory()
 
 	async function handleSubmit(e){
 		e.preventDefault();
@@ -99,6 +100,7 @@ const Login = () => {
 				emailRef.current.value, 
 				passwordRef.current.value, 
 			)
+      history.push('/profile')
 				
 		} catch {
 			setError('Failed to sign in')
