@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import {Button, Paper, Hidden} from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
-// import Link from '@material-ui/core/Link';
 import {Link, useHistory} from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -21,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 		// backgroundSize: 'cover',
 	},
   paper: {
-    marginTop: theme.spacing(14),
+    marginTop: theme.spacing(18),
     padding: theme.spacing(3),
     //border: '1px solid orange',
     display: 'flex',
@@ -65,6 +64,14 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(6,1),
     color: 'black'
   },
+	message: {
+    minWidth: theme.spacing(30),
+		backgroundColor: '#7ef1d6',
+		borderRadius: 5,
+    padding: theme.spacing(1),
+    margin: theme.spacing(6,1),
+    color: 'black'
+  },
   button: {
     minWidth: 200,
     backgroundColor: 'orange',
@@ -83,34 +90,32 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'flex-start'
   },
-  title: {
-    margin: theme.spacing(2)
+	title: {
+    margin: theme.spacing(1)
   }
 }));
 
-const Login = () => {
+const ForgotPassword = () => {
   const classes = useStyles();
 	const emailRef = useRef();
-	const passwordRef = useRef();
-	const {login} = useAuth();
+	const {resetPassword} = useAuth();
 	const [error, setError] = useState('')
 	const [loading, setLoading] = useState(false)
-  const history = useHistory()
+	const [message, setMessage] = useState('')
 
 	async function handleSubmit(e){
 		e.preventDefault();
 
 		try {
+			setMessage('')
 			setError('')
 			setLoading(true)
-			await login(
+			await resetPassword(
 				emailRef.current.value, 
-				passwordRef.current.value, 
 			)
-      history.push('/profile')
-				
+			setMessage('Check your inbox for further instructions')		
 		} catch {
-			setError('Failed to sign in')
+			setError('Failed to reset password')
 		}
 		setLoading(false)
 	}
@@ -133,12 +138,15 @@ const Login = () => {
     <Container component="main" maxWidth="xs">
       <Paper elevation={0} className={classes.paper}>
         <Typography component="h1" variant="span" className={classes.title}>
-          Log In
+          Reset Password
         </Typography>
         {error ? 
         <Fade top >
           <Typography component="span" variant="p" className={classes.error}>{error}</Typography>
         </Fade> : null}
+				{message && <Fade top >
+          <Typography component="span" variant="p" className={classes.message}>{message}</Typography>
+        </Fade>}
         <form onSubmit={handleSubmit} className={classes.form} noValidate>
           <Grid container spacing={2}>
             <Grid item xs={12}>
@@ -156,21 +164,6 @@ const Login = () => {
 
               />
             </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                size="small"
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-								inputRef={passwordRef}
-
-              />
-            </Grid>
           </Grid>
           <Button
             size="large"
@@ -180,15 +173,12 @@ const Login = () => {
             onClick={handleSubmit}
             disabled={loading}
           >
-            Log in
+            Reset Password
           </Button>
           
           <Grid container className={classes.extralinks}>
             <Grid item>
-              <Link to='/forgot-password'>Forgot password?</Link>
-            </Grid>
-            <Grid item >
-              Don't have an account yet? <Link to="/register">Sign up</Link>
+              Go back to <Link to='/login'>Login</Link>
             </Grid>
           </Grid>
         </form>
@@ -200,4 +190,4 @@ const Login = () => {
   );
 }
 
-export default Login
+export default ForgotPassword

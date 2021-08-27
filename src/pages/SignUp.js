@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 		// backgroundSize: 'cover',
 	},
   paper: {
-    marginTop: theme.spacing(11),
+    marginTop: theme.spacing(8),
     padding: theme.spacing(3),
     //border: '1px solid orange',
     display: 'flex',
@@ -63,10 +63,11 @@ const useStyles = makeStyles((theme) => ({
   },
   error: {
     minWidth: theme.spacing(30),
-    borderBottom: '1px solid red',
+		borderRadius: 5,
+		backgroundColor: '#f19e9e',
     padding: theme.spacing(1),
-    margin: theme.spacing(2),
-    color: 'red'
+    margin: theme.spacing(1),
+    color: 'black'
   },
   button: {
     minWidth: 200,
@@ -84,7 +85,8 @@ const useStyles = makeStyles((theme) => ({
   note: {
     color: 'grey',
     fontSize: 12
-  }
+  },
+
 }));
 
 const SignUp = () => {
@@ -134,11 +136,7 @@ const SignUp = () => {
         </Hidden>
         <Grid item xs={12} sm={6}>
     <Container component="main" maxWidth="xs">
-      {/* <CssBaseline /> */}
       <Paper elevation={0} className={classes.paper}>
-        {/* <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar> */}
         <Typography component="h1" variant="span">
           Sign up
         </Typography>
