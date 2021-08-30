@@ -20,19 +20,30 @@ const styles = (theme) => ({
     backgroundColor: 'black'
   },
   button: {
-    border: '2px solid white',
-    borderRadius: 0,
+    border: '4px solid white',
+    borderRadius: 5,
     height: '20%',
     margin: theme.spacing(2, 3),
     padding: theme.spacing(0, 5),
+    backgroundColor: '#88d8f7',
+    color: 'white',
     "&:hover": {
-        border: '2px solid #88d8f7',
+        border: '4px solid #88d8f7',
+        backgroundColor: 'white',
+        color: 'black'
     }
   },
   link: {
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3),
     color: 'white',
+    "&:hover": {
+      color: 'black',
+  }
+  },
+  text: {
+    color: 'white',
+    margin: theme.spacing(4,0)
   },
   buoy: {
     width: 60,
@@ -59,14 +70,14 @@ function DownloadApp(props) {
             <img src={image} alt="phone" className={classes.phone}/>
         </Grid>
         <Grid item xs={12} md={6}>
-            <Typography variant="h4" className={classes.link}>
+            <Typography variant="h4" className={classes.text}>
                 Get Travel4Spanish App
             </Typography>
             <a href="https://play.google.com/store/apps/details?id=com.app.mubgjgyzvwwjerdytqkonoldxexarcfqznlhsamvkspbficiup&gl=PL">
             <Button className={classes.button}>
-                <Typography variant="h4" component="span" className={classes.link}>
+              <Typography variant="h4" component="span" >
                 Download
-                </Typography>
+              </Typography>
             </Button>
             </a>
             <img src={google} alt="google play" className={classes.google}/>

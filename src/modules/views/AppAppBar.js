@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//import clsx from 'clsx';
+import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
-//import Link from '@material-ui/core/Link';
 import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
 import Logo from '../../img/T4SLogo3.png'
-import {Link} from 'react-scroll'
+import Logo1 from '../../img/t4s_logo1.png'
+import Logo2 from '../../img/t4s_logo2.png'
+import {Link as ScrollLink} from 'react-scroll'
 import {NavLink} from 'react-router-dom';
+import Link from '@material-ui/core/Link';
 
 
 const styles = (theme) => ({
@@ -33,12 +35,15 @@ const styles = (theme) => ({
     fontSize: 16,
     color: 'black',
     marginLeft: theme.spacing(3),
+    '&:hover':{
+      color: 'white'
+    }
   },
   linkSecondary: {
     color: 'black',
   },
   logo: {
-    width: "70px"
+    width: "90px"
   }
 });
 
@@ -50,11 +55,11 @@ function AppAppBar(props) {
       <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
           <div className={classes.left} />
-          <Link to="header" spy={true} smooth={true}>
-             <img src={Logo} alt="Logo travel4spanish" className={classes.logo}/>
+          <Link href="/">
+             <img src={Logo1} alt="Logo travel4spanish" className={classes.logo}/>
           </Link>
           <div className={classes.right}>
-          <NavLink
+          {/* <NavLink
               variant="h6"
               underline="none"
               className={classes.rightLink}
@@ -65,8 +70,8 @@ function AppAppBar(props) {
               }}
             >
               {'Our Mission'}
-            </NavLink>
-            <NavLink
+            </NavLink> */}
+            {/* <NavLink
               variant="h6"
               underline="none"
               className={classes.rightLink}
@@ -77,8 +82,33 @@ function AppAppBar(props) {
               }}
             >
               {'Team'}
+            </NavLink> */}
+            <NavLink
+              variant="h6"
+              underline="none"
+              className={classes.rightLink}
+              to="/register"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "white"
+              }}
+            >
+              {'REGISTER'}
             </NavLink>
-          <NavLink
+            <NavLink
+              color="inherit"
+              variant="h6"
+              underline="none"
+              className={classes.rightLink}
+              to="/login"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "white"
+              }}
+            >
+              {'LOGIN'}
+            </NavLink>
+            <NavLink
               variant="h6"
               underline="none"
               className={classes.rightLink}
@@ -88,21 +118,21 @@ function AppAppBar(props) {
                 color: "white"
               }}
             >
-              {'8 Steps Method'}
+              {'8 STEPS'}
             </NavLink>
-            <NavLink
+            {/* <NavLink
               variant="h6"
               underline="none"
               className={classes.rightLink}
-              to="/blog"
+              to="/prices"
               activeStyle={{
                 fontWeight: "bold",
                 color: "white"
               }}
             >
-              {'Blog'}
-            </NavLink>
-            <NavLink
+              {'Prices'}
+            </NavLink> */}
+            {/*<NavLink
               variant="h6"
               underline="none"
               className={classes.rightLink}
@@ -113,24 +143,8 @@ function AppAppBar(props) {
               }}
             >
               {'Contact'}
-            </NavLink>
-            {/* <Link
-              color="inherit"
-              variant="h6"
-              underline="none"
-              className={classes.rightLink}
-              href="/premium-themes/onepirate/sign-in/"
-            >
-              {'Sign In'}
-            </Link>
-            <Link
-              variant="h6"
-              underline="none"
-              className={clsx(classes.rightLink, classes.linkSecondary)}
-              href="/premium-themes/onepirate/sign-up/"
-            >
-              {'Sign Up'}
-            </Link> */}
+            </NavLink> */}
+         
           </div>
         </Toolbar>
       </AppBar>

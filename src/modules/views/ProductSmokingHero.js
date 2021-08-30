@@ -13,14 +13,19 @@ const styles = (theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    marginTop: theme.spacing(9),
+    marginTop: theme.spacing(0),
     marginBottom: theme.spacing(2),
   },
   button: {
     border: '4px solid currentColor',
-    borderRadius: 0,
+    borderRadius: 5,
     height: 'auto',
     padding: theme.spacing(2, 5),
+    "&:hover": {
+      backgroundColor: '#f8e492',
+      position: 'relative',
+      top: -2
+    }
   },
   link: {
     marginTop: theme.spacing(3),

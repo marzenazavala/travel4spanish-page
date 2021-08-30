@@ -15,7 +15,7 @@ const styles = (theme) => ({
 function AppBar(props) {
   
   return (
-    <MuiAppBar elevation={0} position="static" {...props} />
+    <MuiAppBar elevation={1} position="static" {...props} />
   )
 }
 

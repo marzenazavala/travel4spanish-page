@@ -35,6 +35,7 @@ const styles = (theme) => ({
     backgroundColor: theme.palette.common.black,
     opacity: 0.5,
     zIndex: -1,
+    height: '90vh'
   },
   background: {
     position: 'absolute',
@@ -47,8 +48,7 @@ const styles = (theme) => ({
     zIndex: -2,
   },
   arrowDown: {
-    position: 'absolute',
-    bottom: theme.spacing(4),
+    marginTop: theme.spacing(8),
     color: 'orange'
   },
 });
